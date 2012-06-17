@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ardour>
+  <MIDI-port tag="control" device="ardour" mode="duplex" type="alsa/sequencer"/>
+  <MIDI-port tag="mcu" device="ardour" mode="duplex" type="alsa/sequencer"/>
+  <MIDI-port tag="seq" device="ardour" mode="duplex" type="alsa/sequencer"/>
+  <Config>
+    <Option name="trace-midi-input" value="no"/>
+    <Option name="trace-midi-output" value="no"/>
+    <Option name="use-tranzport" value="yes"/>
+    <Option name="minimum-disk-io-bytes" value="262144"/>
+    <Option name="track-buffer-seconds" value="5"/>
+    <Option name="disk-choice-space-threshold" value="57600000"/>
+    <Option name="xfade-model" value="0"/>
+    <Option name="auto-xfade" value="yes"/>
+    <Option name="destructive-xfade-msecs" value="20"/>
+    <Option name="mute-affects-pre-fader" value="yes"/>
+    <Option name="mute-affects-post-fader" value="yes"/>
+    <Option name="mute-affects-control-outs" value="yes"/>
+    <Option name="mute-affects-main-outs" value="yes"/>
+    <Option name="plugins-stop-with-transport" value="no"/>
+    <Option name="stop-recording-on-xrun" value="no"/>
+    <Option name="create-xrun-marker" value="no"/>
+    <Option name="stop-at-session-end" value="no"/>
+    <Option name="seamless-loop" value="yes"/>
+    <Option name="quieten-at-speed" value="no"/>
+    <Option name="show-track-meters" value="no"/>
+    <Option name="jack-time-master" value="yes"/>
+    <Option name="smpte-format" value="6"/>
+    <Option name="timecode-source-is-synced" value="yes"/>
+    <Option name="no-new-session-dialog" value="yes"/>
+    <Option name="use-vst" value="yes"/>
+    <Option name="periodic-safety-backups" value="yes"/>
+    <Option name="periodic-safety-backup-interval" value="120"/>
+    <Option name="default-narrow_ms" value="no"/>
+    <Option name="font-scale" value="87654"/>
+  </Config>
+  <extra>
+    <RulerVisibility smpte="yes" bbt="yes" frames="no" minsec="no" tempo="yes" meter="yes" marker="yes" rangemarker="no" transportmarker="yes" cdmarker="no"/>
+    <Keyboard edit-button="3" edit-modifier="4" delete-button="3" delete-modifier="1" snap-modifier="32"/>
+    <TransportControllables roll="0" stop="1" goto_start="2" goto_end="3" auto_loop="4" play_selection="5" rec="6" shuttle="7"/>
+  </extra>
+  <ControlProtocols>
+    <Protocol name="Mackie" active="no"/>
+    <Protocol name="Generic MIDI" active="no"/>
+  </ControlProtocols>
+</Ardour>
