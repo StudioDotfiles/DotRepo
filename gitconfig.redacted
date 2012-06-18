@@ -1,0 +1,5 @@
+[user]
+	name = bart
+	email = # briefcase(email)
+[alias]
+	ci = commit
