@@ -38,6 +38,33 @@
     <RulerVisibility smpte="yes" bbt="yes" frames="no" minsec="no" tempo="yes" meter="yes" marker="yes" rangemarker="no" transportmarker="yes" cdmarker="no"/>
     <Keyboard edit-button="3" edit-modifier="4" delete-button="3" delete-modifier="1" snap-modifier="32"/>
     <TransportControllables roll="0" stop="1" goto_start="2" goto_end="3" auto_loop="4" play_selection="5" rec="6" shuttle="7"/>
+    <AudioSetup>
+      <periods val="2"/>
+      <priority val="60"/>
+      <ports val="128"/>
+      <inchannels val="0"/>
+      <outchannels val="0"/>
+      <inlatency val="0"/>
+      <outlatency val="0"/>
+      <realtime val="1"/>
+      <nomemorylock val="0"/>
+      <unlockmemory val="0"/>
+      <softmode val="0"/>
+      <force16bit val="0"/>
+      <hwmonitor val="0"/>
+      <hwmeter val="0"/>
+      <verbose val="0"/>
+      <samplerate val="44100Hz"/>
+      <periodsize val="1024"/>
+      <serverpath val="/usr/bin/jackd"/>
+      <driver val="ALSA"/>
+      <interface val="RME Digi9636 (Rev 1.5)"/>
+      <timeout val="Ignore"/>
+      <dither val="None"/>
+      <audiomode val="Playback/Recording on 1 Device"/>
+      <inputdevice val="RME Digi9636 (Rev 1.5)"/>
+      <outputdevice val="RME Digi9636 (Rev 1.5)"/>
+    </AudioSetup>
   </extra>
   <ControlProtocols>
     <Protocol name="Mackie" active="no"/>
