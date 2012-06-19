@@ -3,7 +3,7 @@
 	email = # briefcase(email)
 [alias]
 	ci = commit
-	meld = !/home/bart/source/git-meld/git-meld.pl
+	meld = !~/.local/git-meld/git-meld.pl
 [credential]
 	helper = cache --timeout=3600
 
