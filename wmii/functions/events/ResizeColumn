@@ -1,0 +1,31 @@
+#!/bin/zsh -f
+
+source $WMII_PATH/environ
+fpath+=$WMII_PATH/functions
+autoload wmii_msg
+
+wmiir rm $(wmiir ls -p /lbar) >/dev/null
+
+wmii_msg "Resizing..."
+
+wmiir write /keys << EOF
+Left
+$LEFT
+Right
+$RIGHT
+Up
+$UP
+Down
+$DOWN
+Return
+Escape
+$MENUKEY
+EOF
+
+wmiir read /event |
+while read ; do
+	print "[$0] $REPLY"
+done
+
+wmiir xwrite /event Wmii keys
+wmiir xwrite /event Wmii lbar

@@ -1,0 +1,11 @@
+#!/bin/zsh -f
+
+TAG="$1"
+
+case "$TAG" in
+	nil)
+		;&
+	*)
+		wmiir xwrite "/lbar/$TAG" "$WMII_FOCUSCOLORS" "$TAG"
+		print "Tag: $TAG" | wmii_osd --fade-full=300 &>/dev/null &
+esac

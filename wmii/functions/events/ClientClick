@@ -1,0 +1,19 @@
+#!/bin/zsh -f
+
+client=$1; button=$2
+case "$button" in
+	1)
+		;;
+	2)
+		wmiir xwrite /event Wmii actions ~~
+		;;
+	3)
+		wmiir xwrite /event Wmii $(wmii_9menu kill grow shrink) $client
+		;;
+	4)
+		# mouse up
+		;;
+	5)
+		# mouse down
+		;;
+esac

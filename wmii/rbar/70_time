@@ -1,0 +1,10 @@
+#!/bin/zsh -f
+
+NAME=$0:t
+wmiir remove /rbar/$NAME &>/dev/null
+echo | wmiir create /rbar/$NAME
+
+while (wmiir read /ctl &>/dev/null) {
+	wmiir xwrite /rbar/$NAME $(date +"%R %Z")
+	sleep 1m
+}

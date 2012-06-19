@@ -1,0 +1,33 @@
+# Major Keys Variables (read /usr/include/X11/keysymdef.h)
+MODKEY=Mod4
+ALTMODKEY=Mod1
+UP=Up
+DOWN=Down
+LEFT=Left
+RIGHT=Right
+MENUKEY=Menu
+
+# Font
+#WMII_FONT='-*-terminus-*-r-*-*-12-*-*-*-*-*-*-u'
+WMII_FONT='xft:Sans-9'
+# Wmii environment
+WMII_TERM="rxvt"
+WMII_XLOCK="vlock -nas"
+WMII_LOGFILE=/tmp/wmii-$USER.log
+WMII_VIEWFILE=$TMPDIR/wmii.view
+
+
+# Theme
+## Background color
+WMII_BACKGROUND='#7F7F7F'
+
+## Colors
+#"<text> <background> <border>"
+WMII_NORMCOLORS='#4D4D4D #FAFAD2 #7F7F7F'
+WMII_FOCUSCOLORS='#000000 #ffff00 #000000'
+WMII_NOTIFCOLORS='#AA11AA #333333 #111111'
+WMII_STATUSCOLORS="#000000 #00ff00 #ff0000"
+
+#! Caution: color are extracted to shell parameters
+#set -- $(echo $WMII_NORMCOLORS $WMII_FOCUSCOLORS)
+set -- ${(s: :)$(echo $WMII_NORMCOLORS $WMII_FOCUSCOLORS)}

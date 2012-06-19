@@ -1,0 +1,4 @@
+#!/bin/zsh -f
+
+# wi_fnmenu Client $2 $1 &
+

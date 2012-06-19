@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+# http://portland.freedesktop.org/wiki/EmailConfig
+xdg-email ${*:-$(sselp)}

@@ -1,0 +1,29 @@
+#!/bin/zsh -f
+
+#aumix -L >/dev/null || exit
+amixer >/dev/null || exit
+
+
+NAME=$0:t
+wmiir remove /rbar/$NAME &>/dev/null
+echo | wmiir create /rbar/$NAME
+
+while (wmiir read /ctl &>/dev/null) {
+	state=$(echo $(amixer sget PCM | tail -n 1) | gawk '{print $7}')
+	text="$(echo $(amixer sget PCM | tail -n 1) | gawk '{print $6}')"
+
+	if [ $state = "[off]" ]; then
+			wmiir xwrite /rbar/$NAME $WMII_NOTIFCOLORS m:$text
+		else
+			wmiir xwrite /rbar/$NAME $WMII_NORMCOLORS $text
+	fi
+	sleep 5
+#	VOL=$(aumix -v q | cut -f1 -d',')
+#	if [[ "$VOL" != "$OLD" ]]; then
+#		wmiir xwrite /rbar/$NAME $WMII_NOTIFCOLORS $VOL
+#		sleep 2
+#		wmiir xwrite /rbar/$NAME $WMII_NORMCOLORS $VOL
+#	fi
+#	OLD=$VOL
+#	sleep 2
+}

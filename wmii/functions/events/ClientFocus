@@ -1,0 +1,6 @@
+#!/bin/zsh -f
+
+#$1
+
+#WINDOWID=
+#transset-df -id $WINDOWID

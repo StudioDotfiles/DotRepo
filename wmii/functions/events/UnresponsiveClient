@@ -1,0 +1,17 @@
+#!/bin/zsh -f
+
+source $WMII_PATH/environ
+
+# Use wihack to make the xmessage a transient window of
+# the problem client. This will force it to open in the
+# floating layer of whatever views the client is attached to
+client=$1; shift
+msg="The following client is not responding. What would you like to do?
+"
+resp=$(wihack -transient $client \
+	xmessage -nearmouse -buttons Kill,Wait -print \
+	-fn "${WMII_FONT%%,*}" "$msg $(wmiir read /client/sel/label)")
+
+if [ "$resp" = Kill ]; then
+	wmiir xwrite /client/$client/ctl slay
+fi

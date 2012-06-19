@@ -1,0 +1,39 @@
+#!/bin/zsh -f
+#export WMIIRC=$HOME/.wmii/
+# Wmii config path
+export WMII_PATH=/home/bart/.wmii/
+#$(dirname $WMIIRC)
+
+# Set wmii environment
+source $WMII_PATH/environ
+
+# Search wmii function definitions
+fpath=($WMII_PATH/functions $WMII_PATH/functions/events $fpath)
+for func in $^fpath/*(N-.x:t); autoload $func
+
+LAST_VIEW="$(wmii_lastview || echo 1)"
+
+# Control
+wmiir write /ctl << EOF
+view $LAST_VIEW
+font $WMII_FONT
+focuscolors $WMII_FOCUSCOLORS
+normcolors $WMII_NORMCOLORS
+grabmod $MODKEY
+border 1
+EOF
+
+# Column Rules
+wmiir write /colrules < $WMII_PATH/colrules
+
+# Tagging Rules
+wmiir write /rules < $WMII_PATH/tagrules
+wmiir write /tagrules < $WMII_PATH/tagrules # before wmii3.9
+
+# Starting now...
+Wmii keys
+Wmii autostart
+Wmii lbar
+Wmii rbar &
+wmii_msg "Starting now..."
+Wmii start

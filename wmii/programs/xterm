@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+#xterm -e "wmiir xwrite /client/sel/tags 1; $SHELL" &!

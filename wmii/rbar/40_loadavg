@@ -1,0 +1,19 @@
+#!/bin/zsh -f
+
+NAME=$0:t
+SLEEP=5
+wmiir remove /rbar/$NAME &>/dev/null
+echo | wmiir create /rbar/$NAME
+
+while (wmiir read /ctl &>/dev/null) {
+	averages=($(cat /proc/loadavg | cut -f1-3 -d' '))
+	color=$WMII_NORMCOLORS
+	if [[ ${averages[1]} -gt 1 ]]; then
+		color=$WMII_NOTIFCOLORS
+	elif [[ ${averages[1]} -gt ${averages[2]} && ${averages[2]} -gt ${averages[3]} ]]; then
+		set -- $(echo $WMII_NORMCOLORS)
+		color="$1 $3 $2"
+	fi
+	wmiir xwrite /rbar/$NAME $color $averages[1]
+	sleep $SLEEP
+}

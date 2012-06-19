@@ -1,0 +1,15 @@
+[user]
+	email = # briefcase(email)
+
+[alias]
+meld = !~/.bin/git-meld.pl
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 1018x725+0+0
+[gui]
+	historybrowser = 
+	editor = geany
+[diff]
+	tool = meld
+[merge]
+	tool = meld

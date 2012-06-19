@@ -1,0 +1,16 @@
+#!/bin/zsh -f
+
+if [[ "$1" = "-u" ]]; then
+	N=$PPID
+	shift
+else
+	N=$RANDOM
+fi
+
+PARAMS=($*)
+source $WMII_PATH/environ
+
+{ print "#00FF00 $3 #00FF00 $PARAMS" | wmiir create "/lbar/~msg_$N" &&
+  #wmiir xwrite "/lbar/.msg_$N" $N
+  sleep 5 &&
+  wmiir remove "/lbar/~msg_$N" &>/dev/null } &!

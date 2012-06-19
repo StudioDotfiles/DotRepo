@@ -1,0 +1,12 @@
+#!/bin/zsh -f
+
+TAG=$2
+
+set -- $(echo $WMII_FOCUSCOLORS)
+
+case "$TAG" in
+	nil)
+		;&
+	*)
+		wmiir xwrite "/lbar/$TAG" "#ff0000 $2 #ff0000" "$TAG"
+esac

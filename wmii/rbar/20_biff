@@ -1,0 +1,16 @@
+#!/bin/zsh -f
+
+NAME=$0:t
+wmiir remove /rbar/$NAME &>/dev/null
+#print '\u2709 ...' | wmiir create /rbar/$NAME
+print '...' | wmiir create /rbar/$NAME
+
+while (wmiir read /ctl &>/dev/null) {
+	color=$WMII_NORMCOLORS
+	msg=$(wmiir read /tag/mutt/index | sed -nr 's/.*:=//p')
+	if [[ $msg =~ 'New' ]] {
+		color=$WMII_NOTIFCOLORS
+	}
+	wmiir xwrite /rbar/$NAME $color $msg
+	sleep 1m
+}

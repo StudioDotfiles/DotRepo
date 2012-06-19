@@ -1,0 +1,10 @@
+#!/bin/zsh -fe
+
+PARAMS=($*)
+source $WMII_PATH/environ
+
+print "#000000 $1 #000000 $PARAMS" | wmiir create "/lbar/..LOG.." &&
+wmiir read /event |
+while read ; do
+	wmiir xwrite "/lbar/..LOG.." $REPLY
+done

@@ -1,0 +1,7 @@
+#!/bin/zsh -f
+
+fpath+=$WMII_PATH/functions
+autoload wmii_msg
+
+# browse filesystem ?
+wmii_msg "not implemented yet"

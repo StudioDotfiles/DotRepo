@@ -1,0 +1,416 @@
+# Floating layer
+
+## Toggle selected client between floating and managed layers
+function $MODKEY-Shift-space {
+	wmiir xwrite /tag/sel/ctl send sel toggle
+}
+
+## Toggle between floating and managed layers
+function $MODKEY-space $MODKEY-Control-space {
+	wmiir xwrite /tag/sel/ctl select toggle
+}
+
+
+# Client actions
+
+## Toggle selected client's fullsceen state
+function $MODKEY-f {
+	wmiir xwrite /client/sel/ctl Fullscreen toggle
+	#wmiir xwrite /tag/sel/ctl colmode sel default
+}
+
+## Close client
+function $MODKEY-BackSpace {
+	wmiir xwrite /client/sel/ctl kill
+}
+
+## Destroy client
+function XF86ClearGrab $MODKEY-Shift-c {
+	wmiir xwrite /client/sel/ctl slay || xkill -id $(wmiir read /client/sel/ctl)
+}
+
+## put ardour plugins tiled on workspace 4, and remove from floating layer
+#  todo: make it work on "esc" and if not plugin, pass on the "esc"
+function $MODKEY-r {
+	#IsPlug=$(wmiir read /client/sel/props | grep -c "ardour_plugin_editor|plugin_ui")
+	IsPlug=$(wmiir read /client/sel/props | grep -c "plugin")
+	#IsPlug=$(wmiir read /client/sel/props | grep -c "rxv")
+	if [ "$IsPlug" = "1" ]; then
+		ChanName=$(wmiir read /client/sel/label | gawk -F: '{print $1}')
+		wmiir xwrite /client/sel/tags $ChanName
+	else
+		echo "no"		
+	fi	
+}	
+
+# .*[:] is a regex that filters the channel name before the plugin-name.
+# 
+
+# the plan:
+# put plugins on float & 4
+# when esc is pressed (at plugin), remove from float, put on 4
+# see ~.wmii/keys
+# when re-opened, put on float, check for doubles at 4
+
+
+# Changing column modes
+
+## Set column to default mode
+function $MODKEY-d {
+	wmiir xwrite /client/sel/ctl Fullscreen off
+	wmiir xwrite /tag/sel/ctl colmode sel default-max
+	#wmiir xwrite /tag/sel/ctl colmode sel default-max
+}
+
+## Set column to stack mode
+function $MODKEY-s {
+	wmiir xwrite /client/sel/ctl Fullscreen off
+	#wmiir xwrite /tag/sel/ctl colmode sel stack
+	wmiir xwrite /tag/sel/ctl colmode sel stack-max
+}
+
+## Set column to max mode
+function $MODKEY-m {
+	wmiir xwrite /client/sel/ctl Fullscreen off
+	#wmiir xwrite /tag/sel/ctl colmode sel max
+	wmiir xwrite /tag/sel/ctl colmode sel stack+max
+}
+
+
+# Wmii oddities
+
+## Wmii system menu
+function $MODKEY-F12 $MODKEY-$MENUKEY {
+	#CLIENT=$(wmiir read /client/sel/ctl)
+	#wmii_msg $CLIENT $(wmiir read /client/sel/label)
+	echo "Wmii menu" | wmiir write /event
+}
+
+## Wmii status bar
+function $MODKEY-b {
+	bar=$(wmiir read /ctl | grep "^bar" | cut -f2 -d' ')
+	if [ "$bar" = "on" ]; then
+		wmiir xwrite /ctl bar off
+	else
+		wmiir xwrite /ctl bar on bottom
+		#wmiir xwrite /ctl bar on top
+		#do=$(print -l "on bottom" "on top" off | wmii_dmenu -p Bar)
+	fi
+}
+
+## Wmii help
+function $MODKEY-F1 {
+	echo "Wmii help" | wmiir write /event
+}
+
+
+# Running programs
+
+## Open program menu
+function XF86Start $MODKEY-F2 $MODKEY-p {
+	do=$(print -lo ${commands:t} | wmii_dmenu -p Command)
+	${=do} &!
+	test 0 -eq $? && wmii_msg "$do..."
+}
+
+## Open zshrun, see .zshrc for more info
+function $MODKEY-z {
+	sh -c 'ZSHRUN=1 rxvt -name zshrun -geometry 100x8+200+300 +ls'
+}
+
+
+## Launch a terminal
+function XF86Terminal $MODKEY-F3 $MODKEY-Return {
+	# eval wmiir setsid $WMII_TERM &
+	$WMII_TERM &!
+}
+
+## Launch a terminal on right column
+function $MODKEY-Shift-Return {
+	$WMII_TERM -e "wmiir xwrite /tag/sel/ctl send sel right; $SHELL" &!
+}
+
+## Open wmii actions menu
+function $MODKEY-F4 $MODKEY-a {
+	wmiir xwrite /event Wmii actions
+}
+
+## Invert colors
+function $MODKEY-i {
+	xcalib -i -a
+}
+
+## Run file manager
+function XF86HomePage {
+	pcmanfm &
+}
+
+## Open selected URL in browser
+function XF86OpenURL $MODKEY-o {
+	echo "Wmii actions open" | wmiir write /event
+}
+
+## Run browser
+function XF86WWW {
+	pick-web-browser &
+}
+
+## Run mailer
+function XF86Mail {
+	$WMII_TERM -e mutt &
+}
+
+## Take a screenshot
+function $MODKEY-Print {
+	import -quality 60 -comment "%m:%f %wx%h" ~/screenshot.png
+}
+
+## Edit file
+function $MODKEY-e {
+	echo "Wmii actions edit" | wmiir write /event
+}
+
+## Run messager
+function XF86Messenger {
+}
+
+## Set away status
+function XF86Away {
+}
+
+## Search
+function XF86Search {
+}
+
+## Hot links
+function XF86HotLinks {
+	apwal &
+}
+
+# Tag actions
+
+## Change to another tag
+function $MODKEY-t {
+	wmiir xwrite /ctl "view $(tagsmenu -p 'Select tag:')"
+}
+
+## Retag the selected client
+function $MODKEY-Shift-t {
+	VIEW=$(wmiir read /ctl | grep '^view' | cut -d' ' -f2)
+	TAG=$(tagsmenu -p 'Retag:')
+	# shortcuts
+	if [[ -z "$TAG" ]]; then
+		TAG="-$VIEW"
+	fi
+	if [[ "$TAG" == "-" ]]; then
+		TAG="-$VIEW"
+	fi
+	if [[ "$TAG" == "+" ]]; then
+		TAG="+$(wmii_lastview)"
+	fi
+	source $WMII_PATH/environ
+	# blinking mode
+	( TAG=${${TAG#+}#-}
+	  wmiir xwrite "/lbar/${${TAG#+}#-}" "$WMII_NOTIFCOLORS" "$TAG";
+	  sleep 3;
+	  wmiir xwrite "/lbar/${${TAG#+}#-}" "$WMII_NORMCOLORS" "$TAG") &
+	wmiir xwrite "/client/sel/tags" "$TAG"
+}
+
+## Go to previous selected tag
+function $MODKEY-Tab {
+	wmiir xwrite /ctl "view $(wmii_lastview)"
+}
+
+## Go to workspace on the left of the tags bar
+function $MODKEY-Prior {
+	current=$(wmiir read /tag/sel/ctl | head -n1)
+	list=($(wmiir ls /tag | sed 's|/||; /^sel$/d' | grep -1 $current))
+	wmiir xwrite /ctl "view $list[1]"
+}
+
+## Go to workspace on the right of the tags bar
+function $MODKEY-Next {
+	current=$(wmiir read /tag/sel/ctl | head -n1)
+	list=($(wmiir ls /tag | sed 's|/||; /^sel$/d' | grep -1 $current))
+	wmiir xwrite /ctl "view $list[-1]"
+}
+
+
+# Moving around
+
+## Select the client to the left
+function $MODKEY-$LEFT $MODKEY-Left {
+	wmiir xwrite /tag/sel/ctl select left
+}
+
+## Select the client to the right
+function $MODKEY-$RIGHT $MODKEY-Right {
+	wmiir xwrite /tag/sel/ctl select right
+}
+
+## Select the client below
+function $MODKEY-$DOWN $MODKEY-Down {
+	wmiir xwrite /tag/sel/ctl select down
+}
+
+## Select the client above
+function $MODKEY-$UP $MODKEY-Up {
+	wmiir xwrite /tag/sel/ctl select up
+}
+
+
+# Moving clients around
+
+## Move selected client to the left
+function $MODKEY-Shift-$LEFT $MODKEY-Shift-Left {
+	wmiir xwrite /tag/sel/ctl send sel left
+}
+
+## Move selected client to the right
+function $MODKEY-Shift-$RIGHT $MODKEY-Shift-Right {
+	wmiir xwrite /tag/sel/ctl send sel right
+}
+
+## Move selected client down
+function $MODKEY-Shift-$DOWN $MODKEY-Shift-Down {
+	wmiir xwrite /tag/sel/ctl send sel down
+}
+
+## Move selected client up
+function $MODKEY-Shift-$UP $MODKEY-Shift-Up {
+	wmiir xwrite /tag/sel/ctl send sel up
+}
+
+
+# Moving through stacks
+
+## Swap selected client left
+function $MODKEY-Control-$LEFT $MODKEY-Control-Left  {
+	wmiir xwrite /tag/sel/ctl swap sel left
+}
+
+## Swap selected client right
+function $MODKEY-Control-$RIGHT $MODKEY-Control-Right {
+	wmiir xwrite /tag/sel/ctl swap sel right
+}
+
+## Select the stack below
+function $MODKEY-Control-$DOWN $MODKEY-Control-Down {
+	wmiir xwrite /tag/sel/ctl swap sel down
+	#wmiir xwrite /tag/sel/ctl select down stack
+}
+
+## Select the stack above
+function $MODKEY-Control-$UP $MODKEY-Control-Up {
+	wmiir xwrite /tag/sel/ctl swap sel up
+	#wmiir xwrite /tag/sel/ctl select up stack
+}
+
+for (( i=0; i<10; i+=1 )); do
+## Move to the numbered tag
+function $MODKEY-$i {
+	wmiir xwrite /ctl view ${${funcstack[1]}##*-}
+}
+
+#for (( i=0; i<10; i+=1 )); do
+## Retag selected client with the numbered tag
+function $MODKEY-Shift-$i {
+	wmiir xwrite "/client/sel/tags" ${${funcstack[1]}##*-}
+}
+done
+
+
+# Resizing clients
+## Grow horizontally
+function $MODKEY-$ALTMODKEY-$UP {
+	wmiir xwrite /tag/sel/ctl grow sel sel up
+}
+
+## Shrink horizontally
+function $MODKEY-$ALTMODKEY-$DOWN {
+	wmiir xwrite /tag/sel/ctl grow sel sel up -1
+}
+
+## Grow vertically
+function $MODKEY-$ALTMODKEY-$LEFT {
+	wmiir xwrite /tag/sel/ctl grow sel sel left
+}
+
+## Shrink vertically
+function $MODKEY-$ALTMODKEY-$RIGHT {
+	wmiir xwrite /tag/sel/ctl grow sel sel left -1
+}
+
+
+ #for i in "'Mod1' grow" "Mod1-Control grow -1" "Mod1-Shift nudge"; {
+ #	eval "set -- $i"; mod="$1"; cmd=$2; shift 2
+ #	function $mod-$LEFT {
+ #		wmiir xwrite /tag/sel/ctl $cmd sel sel left $*
+ #	}
+ #	function $mod-$RIGHT {
+ #		wmiir xwrite /tag/sel/ctl $cmd sel sel right $*
+ #	}
+ #	function $mod-$UP {
+ #		wmiir xwrite /tag/sel/ctl $cmd sel sel up $*
+ #	}
+ #	function $mod-$DOWN {
+ #		wmiir xwrite /tag/sel/ctl $cmd sel sel down $*
+ #	}
+ #}
+
+
+# Multimedia
+
+## Volume up
+function $MODKEY-KP_Add {
+	wmii_volume 5%+
+}
+function $MODKEY-XF86AudioRaiseVolume XF86AudioRaiseVolume {
+	amixer set Master 10+
+}
+
+## Volume down
+function $MODKEY-KP_Subtract {
+	wmii_volume 5%-
+}
+function $MODKEY-XF86AudioLowerVolume XF86AudioLowerVolume {
+	amixer set Master 10-
+}
+
+## Toggle Volume
+function XF86AudioMute {
+	amixer set Master toggle
+}
+
+## Audio Pause
+function XF86AudioPause {
+}
+
+
+# System
+
+## Lock the session
+function XF86ScreenSaver {
+	$WMII_XLOCK
+}
+
+## Battery status
+function XF86Battery {
+	$WMII_TERM -e acpitool && read &
+}
+
+## Network: Bluetooth status
+function XF86Bluetooth {
+}
+
+## Network: Wireless status
+function XF86WLAN {
+	#iwconfig wlan0 power off
+	wmii_msg $(iwlist wlan0 power)
+	wmii_osd $(iwlist wlan0 power)
+}
+
+## Log off
+function XF86LogOff {
+}

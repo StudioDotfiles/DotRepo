@@ -1,0 +1,3 @@
+#!/bin/zsh -f
+
+$WMII_TERM -e "urlview =(echo '${*:-$(sselp)}')"

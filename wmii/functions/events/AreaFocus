@@ -1,0 +1,12 @@
+#!/bin/zsh -f
+
+# as column ?
+
+AREA=$1
+
+case "$AREA" in
+	nil)
+		;&
+	*)
+		echo "AreaFocus: $AREA" | wmii_osd &
+esac

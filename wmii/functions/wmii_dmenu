@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+killall dmenu &>/dev/null
+
+PARAMS=($*)
+source $WMII_PATH/environ
+cat /dev/stdin | dmenu -b -fn "$WMII_FONT" -nf $1 -nb $2 -sf $4 -sb $5 $PARAMS

@@ -1,0 +1,9 @@
+#!/bin/zsh -f
+
+killall dzen2 &>/dev/null
+
+PARAMS=($*)
+source $WMII_PATH/environ
+# -dock ?
+
+cat /dev/stdin | dzen2 -fn "$WMII_FONT" -fg $1 -bg $2 -p 5 $PARAMS &!

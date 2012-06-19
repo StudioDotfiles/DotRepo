@@ -1,0 +1,4 @@
+#!/bin/zsh -f
+
+fpath+=$WMII_PATH/functions
+autoload wmii_msg && wmii_msg $*

@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+$(which padsp || :) pidgin && wmiir xwrite /tag/.im/ctl send $(wmiir read /tag/.im/index | grep "Buddy List" | cut -f2 -d' ') right
+

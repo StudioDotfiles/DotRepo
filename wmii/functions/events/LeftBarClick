@@ -1,0 +1,4 @@
+#!/bin/zsh -f
+
+shift
+wmiir xwrite /ctl view "$@"

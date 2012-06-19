@@ -1,0 +1,11 @@
+#!/bin/zsh -f
+
+OSD=aosd_cat
+which $OSD &>/dev/null || exit
+
+PARAMS=($*)
+DELAY=2
+FONT="-*-terminus-*-*-*-*-32*-*-*-*-*-*-*"
+source $WMII_PATH/environ
+
+cat /dev/stdin | $OSD --position=4 --fade-full=${DELAY}000 --shadow-offset=2 --fore-color="orange" --font="$FONT" $PARAMS

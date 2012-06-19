@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+#pgrep -u $LOGNAME mutt | grep -v $$ && exit
+
+#LC_CTYPE=fr_FR.UTF-8 exec xterm -tn xterm-256color -name Mutt -e /usr/bin/mutt -y # -f $MAIL

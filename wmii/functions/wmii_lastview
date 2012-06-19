@@ -1,0 +1,3 @@
+#!/bin/zsh -f
+
+cat $WMII_VIEWFILE || wmiir read /ctl | sed -n 's/view \(.*\)/\1/p' || print "1"

@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+autoload getclient
+ARGV0=scratchpad
+
+if ! wmiir ls /tag | grep scratchpad; then
+	 $WMII_TERM -name scratchpad &!
+fi
+
+
+CLIENT=$(getclient ".*scratchpad.*" scratchpad)
+xmessage $CLIENT
+if [ $(wmiir read /client/$CLIENT/tags | grep '^scratchpad$') ]; then
+	wmiir xwrite "/client/$CLIENT/tags" scratchpad+sel
+else
+	wmiir xwrite "/client/$CLIENT/tags" scratchpad
+fi

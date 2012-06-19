@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+autoload pick-web-browser && pick-web-browser

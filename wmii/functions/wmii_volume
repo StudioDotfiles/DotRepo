@@ -1,0 +1,44 @@
+#!/bin/zsh
+
+CHANNEL=Master # PCM|Master
+PARAMS=($*)
+
+fpath+=($WMII_PATH/functions)
+autoload wmii_osd
+
+killall osd_cat aosd_cat wmii_osd &>/dev/null
+source $WMII_PATH/environ
+
+case ${PARAMS[1]} in
+	play|pause)
+		;;
+	prev)
+		a="Previous: `mpc prev|head -1`"
+		;;
+	next)
+		a="Next: `mpc next|head -1`"
+		;;
+	np)
+		a="np: `mpc|head -1`"
+		;;
+	mute|unmute)
+		#if [ -f ~/.volume ]; then
+		#	ossmix vol `cat ~/.volume` ; a="Unmute"
+		#	rm ~/.volume
+		#else
+		#	VOLUME=$(ossmix vol | awk '{print $10}' | awk -F : '{print $1}')
+		#	ossmix vol 0 ; a="Mute"
+		#	echo $VOLUME > ~/.volume
+		#fi
+		case `amixer set $CHANNEL toggle | sed -n "s/.*\[\(.*\)\].*/\1/p" | head -n1` in
+			on) a="(unmuted)" ;;
+			*) a="(muted)" ;;
+		esac
+		print $a | wmii_osd
+		;;
+	*)
+		#"Volume: `ossmix vol -- $1 | cut -f1 -d. | awk '{print $NF}'`%"
+		vol=$(amixer set $CHANNEL ${PARAMS[1]} unmute | sed -n 's/.*\[\([[:digit:]]\+\)%\].*/\1/p' | head -n1)
+		print "Volume: $vol%" | wmii_osd
+		;;
+esac

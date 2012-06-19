@@ -1,0 +1,3 @@
+#!/bin/zsh -f
+
+./open "http://www.wikipedia.org/search-redirect.php?language=en&search=$(sselp)"
