@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instant>
+  <ExportDialog sample_rate="44.1kHz" src_quality="best" dither_type="None" channel_count="stereo" header_format="WAV" bitdepth_format="24 bit" endian_format="Little-endian (Intel)" filename="/home/bart/tst/export/export.wav" cue_file_type="None">
+    <Tracks>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+    </Tracks>
+  </ExportDialog>
+  <Editor id="12" zoom-focus="0" zoom="223.221154" snap-to="11" snap-mode="0" edit-point="EditAtMouse" playhead="0" show-waveforms="yes" show-waveforms-rectified="no" show-waveforms-recording="yes" show-measures="yes" follow-playhead="no" stationary-playhead="no" xfades-visible="yes" region-list-sort-type="ByEndInFile" mouse-mode="MouseObject" show-editor-mixer="no">
+    <geometry x_size="1022" y_size="722" x_pos="0" y_pos="15" x_off="1" y_off="30" edit_pane_pos="922"/>
+  </Editor>
+  <Mixer narrow-strips="no" show-mixer="yes">
+    <geometry x_size="1022" y_size="707" x_pos="0" y_pos="30" x_off="0" y_off="0" mixer_rhs_pane1_pos="236" mixer_list_hpane_pos="75"/>
+  </Mixer>
+</instant>

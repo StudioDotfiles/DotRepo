@@ -1,13 +1,17 @@
 [user]
+	name = bart
 	email = # briefcase(email)
-
 [alias]
-meld = !~/.bin/git-meld.pl
+	ci = commit
+	meld = !~/.bin/git-meld.pl
+[credential]
+	helper = cache --timeout=3600
+	
 [giggle]
 	main-window-maximized = false
 	main-window-geometry = 1018x725+0+0
 [gui]
-	historybrowser = 
+	#historybrowser = 
 	editor = geany
 [diff]
 	tool = meld

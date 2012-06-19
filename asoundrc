@@ -1,0 +1,98 @@
+pcm.rme9636_1 {
+	type hw
+	card 1
+}
+ctl.rme9636_1 {
+	type hw
+	card 1
+}
+pcm.rme9636_0 {
+	type hw
+	card 0
+}
+ctl.rme9636_0 {
+	type hw
+	card 0
+}
+ctl.rme9636_64 {
+	type hw
+	card 0
+}
+
+pcm.rme9636_64 {
+	type multi;
+	slaves.a.pcm rme9636_0;
+	slaves.a.channels 18;
+	slaves.b.pcm rme9636_1;
+	slaves.b.channels 18;
+
+
+	# Use rme9636_0 ch 0-7 mapped to ALSA ch 0-7
+
+	bindings.0.slave a;
+	bindings.0.channel 0;
+	bindings.1.slave a;
+	bindings.1.channel 1;
+	bindings.2.slave a;
+	bindings.2.channel 2;
+	bindings.3.slave a;
+	bindings.3.channel 3;
+	bindings.4.slave a;
+	bindings.4.channel 4;
+	bindings.5.slave a;
+	bindings.5.channel 5;
+	bindings.6.slave a;
+	bindings.6.channel 6;
+	bindings.7.slave a;
+	bindings.7.channel 7;
+	bindings.8.slave a;
+	bindings.8.channel 8;
+	bindings.9.slave a;
+	bindings.9.channel 9;
+	bindings.10.slave a;
+	bindings.10.channel 10;
+	bindings.11.slave a;
+	bindings.11.channel 11;
+	bindings.12.slave a;
+	bindings.12.channel 12;
+	bindings.13.slave a;
+	bindings.13.channel 13;
+	bindings.14.slave a;
+	bindings.14.channel 14;
+	bindings.15.slave a;
+	bindings.15.channel 15;
+	
+	# Use rme9636_1 ch 16-31 mapped to ALSA ch 0-16
+	bindings.16.slave b;
+	bindings.16.channel 0;
+	bindings.17.slave b;
+	bindings.17.channel 1;
+	bindings.18.slave b;
+	bindings.18.channel 2;
+	bindings.19.slave b;
+	bindings.19.channel 3;
+	bindings.20.slave b;
+	bindings.20.channel 4;
+	bindings.21.slave b;
+	bindings.21.channel 5;
+	bindings.22.slave b;
+	bindings.22.channel 6;
+	bindings.23.slave b;
+	bindings.23.channel 7;
+	bindings.24.slave b;
+	bindings.24.channel 8;
+	bindings.25.slave b;
+	bindings.25.channel 9;
+	bindings.26.slave b;
+	bindings.26.channel 10;
+	bindings.27.slave b;
+	bindings.27.channel 11;
+	bindings.28.slave b;
+	bindings.28.channel 12;
+	bindings.29.slave b;
+	bindings.29.channel 13;
+	bindings.30.slave b;
+	bindings.30.channel 14;
+	bindings.31.slave b;
+	bindings.31.channel 15;
+}

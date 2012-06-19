@@ -3,5 +3,5 @@
 #./open "http://bugs.debian.org/$(sselp)"
 
 #package search in debian testing
-./open "http://google.com/ncr/search?tbm=isch&q=$(sselp)"
+./open "https://www.google.com/search?q=$(sselp)"
 
