@@ -1,0 +1,17 @@
+#!/bin/zsh -f
+
+MATCHES=()
+
+screen -wipe
+for i in $(screen -ls); do
+	if [[ "$i" =~ "([[:digit:]]+\..*)" ]]; then
+		MATCHES=($MATCHES $MATCH)
+	fi
+done
+
+if [[ -n $MATCHES ]]; then
+	do=$(print -l $MATCHES | wmii_dmenu -p "screen")
+	NAME=$(echo ${(C)${(s:.:)do}} | cut -f2 -d' ')
+	$WMII_TERM -title "$NAME" -name "$NAME" -e "screen -d -r '$do'" &!
+	#yeahconsole -e screen -d -r "$do" &!
+fi

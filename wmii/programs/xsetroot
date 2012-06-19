@@ -1,0 +1,4 @@
+#!/bin/zsh -f
+
+source $WMII_PATH/environ
+xsetroot -solid $WMII_BACKGROUND

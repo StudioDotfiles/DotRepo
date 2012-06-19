@@ -1,0 +1,7 @@
+#!/bin/zsh -f
+
+which vlc || exit
+
+if [[ $(uname -n) = 'Boule' ]]; then
+	vlc &!
+fi

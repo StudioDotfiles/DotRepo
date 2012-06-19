@@ -1,0 +1,3 @@
+#!/bin/zsh -f
+
+wmiir xwrite /tag/sel/ctl send sel $1

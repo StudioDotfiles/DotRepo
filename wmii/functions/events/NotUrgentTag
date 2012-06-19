@@ -1,0 +1,9 @@
+#!/bin/zsh -f
+
+TAG=$2
+
+set -- $(echo $WMII_NORMCOLORS)
+
+wmiir xwrite "/lbar/$TAG" "$1 $2 #ff0000" "$TAG"
+sleep 2
+wmiir xwrite "/lbar/$TAG" $WMII_NORMCOLORS "$TAG"

@@ -1,0 +1,3 @@
+#!/bin/zsh -f
+
+print "Fullscreen $2" | wmii_osd &

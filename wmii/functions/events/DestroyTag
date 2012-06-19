@@ -1,0 +1,3 @@
+#!/bin/zsh -f
+
+wmiir remove "/lbar/$@"

@@ -1,0 +1,3 @@
+#!/bin/zsh -f
+
+echo "$WMII_NORMCOLORS" "$@" | wmiir create "/lbar/$@"

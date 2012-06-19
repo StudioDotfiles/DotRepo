@@ -1,0 +1,8 @@
+#!/bin/zsh -f
+
+PARAMS=($*)
+
+{ print "$WMII_NOTIFCOLORS $PARAMS" | wmiir create "/rbar/$0" &&
+  #wmiir xwrite "/rbar/.msg_$N" $N
+  sleep 5 &&
+  wmiir remove "/rbar/$0" &>/dev/null } &!

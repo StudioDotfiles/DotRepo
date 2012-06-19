@@ -1,0 +1,37 @@
+#!/bin/zsh -f
+
+[ ! "$(uname -n)" = "crater" ] || exit
+
+NAME=$0:t
+SLEEP=30
+HOST=free.fr
+INTERFACE=$(cat /etc/iftab | cut -f1 -d' ')
+INTERFACE=${INTERFACE:=$(ifconfig | head -n1 | cut -f1 -d' ')}
+RXB=0; TXB=0
+
+source $WMII_PATH/environ
+
+wmiir remove /rbar/$NAME &>/dev/null
+echo | wmiir create /rbar/$NAME
+ALIVE="wmiir read /ctl &>/dev/null"
+
+while (wmiir xwrite /rbar/$NAME $WMII_NOTIFCOLORS "${INTERFACE}: (no network)" &>/dev/null) {
+	while (eval "$ALIVE" && ping -c1 $HOST &>/dev/null) {
+		# get new rx/tx counts
+		RXBN=$(cat /sys/class/net/${INTERFACE}/statistics/rx_bytes)
+		TXBN=$(cat /sys/class/net/${INTERFACE}/statistics/tx_bytes)
+
+		# calculate the rates
+		# format the values to 4 digit fields
+		RXR=$(printf "%d\n" $(echo "($RXBN - $RXB)/1024/${SLEEP}" | bc))
+		TXR=$(printf "%d\n" $(echo "($TXBN - $TXB)/1024/${SLEEP}" | bc))
+
+		wmiir xwrite /rbar/$NAME $WMII_NORMCOLORS "${INTERFACE}: ${RXR}kB/s(d) ${TXR}kB/s(u)"
+		#wmiir xwrite /rbar/$NAME "${INTERFACE}: ${RXR} kB/s↓ ${TXR} kB/s↑"
+
+		# reset old rates
+		RXB=$RXBN; TXB=$TXBN
+
+		sleep $SLEEP
+	}
+}

@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+NAME=$0:t
+
+fpath+=$WMII_PATH/functions
+autoload zargs
+autoload wmii_dmenu
+autoload pick-web-browser
+
+ARGS=(${@:-$(sselp)})
+
+# input can be edited
+URI=$(print -l $ARGS | wmii_dmenu -p $NAME -l 10)
+
+if [ -n "$URI" ]; then
+	pick-web-browser "$URI"
+fi
+
+#[[ -n "$URI" ]] || exit
+#URI=${URI#file:/}
+#if [[ -f "$URI" ]]; then
+#	run-mailcap --action=view "$URI"
+#else
+#	pick-web-browser "$URI"
+#	xdg-open "$URI"
+#fi

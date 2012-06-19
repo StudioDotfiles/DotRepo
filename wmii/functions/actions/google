@@ -1,0 +1,7 @@
+#!/bin/zsh -f
+
+#./open "http://bugs.debian.org/$(sselp)"
+
+#package search in debian testing
+./open "https://www.google.com/search?q=$(sselp)"
+

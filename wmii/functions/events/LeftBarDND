@@ -1,0 +1,5 @@
+#!/bin/zsh -f
+
+shift
+wmiir xwrite /ctl view "$@"
+#echo "LeftBarDND event" | wmii_osd

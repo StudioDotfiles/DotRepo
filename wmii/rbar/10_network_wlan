@@ -1,0 +1,18 @@
+#!/bin/zsh -f
+
+which iwconfig &>/dev/null || exit
+
+NAME=$0:t
+INTERFACE=$(iwconfig 2>/dev/null | sed -n '/ESSID/p' | cut -f1 -d' ')
+
+wmiir remove /rbar/$NAME &>/dev/null
+iwconfig $INTERFACE 2>&1 | grep 'no wireless' && exit
+echo "$WMII_NORMCOLORS" "status" | wmiir create /rbar/$NAME
+
+## Here is the place to customize
+while wmiir xwrite /rbar/$NAME \
+    `iwconfig $INTERFACE | grep ESSID | sed 's/.*ESSID:"//g; s/"\s*$//g'` - \
+    `iwconfig $INTERFACE | grep 'Link Quality' | sed 's/\s*Link Quality=//; s/\s.*//'`
+do
+    sleep 30
+done

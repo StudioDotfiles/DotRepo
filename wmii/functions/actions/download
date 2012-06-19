@@ -1,0 +1,11 @@
+#!/bin/zsh -f
+
+cd $TMPDIR
+
+fpath+=$WMII_PATH/functions
+autoload zargs
+autoload wmii_dmenu
+autoload wmii_msg
+
+command wget $(zargs "${*:-$(sselp)}" | wmii_dmenu -p download)
+wmii_msg "Downloaded in '$TMPDIR'."

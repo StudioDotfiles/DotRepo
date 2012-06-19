@@ -1,0 +1,39 @@
+#!/bin/zsh
+
+case "$2" in
+	# Volume by mouse click
+	*sound)
+		if [[ "$1" -eq 4 ]]; then 
+			amixer set PCM 2dB+
+		elif [[ "$1" -eq 5 ]]; then
+			amixer set PCM 2dB-
+		elif [[ "$1" -eq 2 ]]; then
+			amixer set PCM toggle
+		elif [[ "$1" -eq 1 ]]; then
+			$WMII_TERM -class alsamixer alsamixer
+		fi
+		#state=$(echo $(amixer sget PCM | tail -n 1) | gawk '{print $7}')
+		#text="$(echo $(amixer sget PCM | tail -n 1) | gawk '{print $6}')"
+		#if [ $state = "[off]" ]; then
+		#		wmiir xwrite /rbar/50_sound $WMII_NOTIFCOLORS m:$text
+		#	else
+		#		wmiir xwrite /rbar/50_sound $WMII_NORMCOLORS $text
+		#fi
+		;;
+	# ssh to known hosts
+	*hostname)
+		$WMII_PATH/functions/actions/ssh
+		;;
+	# calendar
+	*date)
+		$WMII_TERM -e "cal $(date +%Y) && read"
+		;;
+	# load average
+	*loadavg)
+		$WMII_TERM -e htop
+		;;
+	# time
+	*time)
+		wmiir xwrite /event Wmii menu ~~
+		;;
+esac

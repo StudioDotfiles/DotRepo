@@ -1,0 +1,4 @@
+#!/bin/zsh -f
+
+[[ -n $WMII_DEBUG ]] && wmii_key $@
+$@

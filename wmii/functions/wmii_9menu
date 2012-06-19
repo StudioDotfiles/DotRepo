@@ -1,0 +1,9 @@
+#!/bin/zsh -f
+
+PARAMS=($*)
+
+# wmii 3.6
+#source $WMII_PATH/environ
+#wmii9menu -font "$WMII_FONT" -nf $1 -nb $2 -sf $4 -sb $5 -br $6 $PARAMS &!
+
+wmii9menu $PARAMS &!

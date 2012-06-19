@@ -1,0 +1,5 @@
+#!/bin/zsh -f
+
+TAG=$1
+print "$TAG" > $WMII_VIEWFILE
+wmiir xwrite "/lbar/$TAG" "$WMII_NORMCOLORS" "$TAG"

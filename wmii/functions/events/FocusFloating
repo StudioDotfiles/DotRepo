@@ -1,0 +1,4 @@
+#!/bin/zsh -f
+
+set -- $(echo $WMII_FOCUSCOLORS)
+wmiir xwrite /ctl "focuscolors #ff0000 $2 #ff0000"

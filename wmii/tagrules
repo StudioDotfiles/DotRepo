@@ -1,0 +1,45 @@
+/Firefox|Iceweasel.*/	-> 1
+/[Gg]eany.*/			-> 2
+/pidgin:Pidgin:.*@conference.*/ -> 0
+/[Pp]idgin.*/ -> 0
+
+# Ardour
+# .*[:] is a regex that filters the channel name before the plugin-name.
+#
+
+# the plan:
+# put plugins on float & 4
+# when esc is pressed (at plugin), remove from float, put on 4
+# see ~.wmii/keys
+# when re-opened, put on float, check for doubles at 4
+/ardour_plugin_editor|plugin_ui/ -> ~+4
+
+
+/zshrun/ -> ~
+
+
+/scratchpad:XTerm.*/ -> ~+scratchpad
+/.*Xmessage.*/ -> ~
+/.*alsamixer.*/ -> ~
+/.*Dia:dia.*/ -> dia
+/.*Miro.real.*/ -> miro
+
+/^vlc:Vlc:*/ -> vlc
+/^vlc:/ group=1
+
+
+# name:class:title
+# Apps with system tray icons like to their main windows
+# Give them permission.
+/^Pidgin:/ allow=+activate
+
+/<nil>:<nil>:Event Tester/ floating=on
+/.*alsamixer.*/ floating=on
+
+# ROX puts all of its windows in the same group, so they open
+# with the same tags.  Disable grouping for ROX Filer.
+#/^ROX-Filer:/ group=0
+
+#/.*dzen.*/ -> ~
+
+/.*/ -> sel

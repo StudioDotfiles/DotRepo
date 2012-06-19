@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+autoload wmii_msg
+CLIENT=$1
+TYPE=$2
+
+wmii_msg "! $(wmiir read /client/$CLIENT/label)"

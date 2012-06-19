@@ -1,0 +1,3 @@
+#!/bin/zsh -f
+
+./open "http://translate.google.com/?tl=en#auto|en|$(sselp)"

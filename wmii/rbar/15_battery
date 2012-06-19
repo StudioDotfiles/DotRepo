@@ -1,0 +1,26 @@
+#!/bin/zsh -f
+
+/usr/sbin/laptop-detect || exit
+
+NAME=$0:t
+
+source $WMII_PATH/environ
+
+wmiir remove /rbar/$NAME &>/dev/null
+echo | wmiir create /rbar/$NAME
+
+while (wmiir read /ctl &>/dev/null) {
+	#acpi -p | sed 's/.*Battery .: //g; s/discharging/-/g; s/charging/+/g; s/charged//g; s/%.*/%/g; s/, //g'
+	level=$(acpi | tr -d ' ' | cut -f2-3 -d":")
+	if [[ -n $(echo $level | sed -ne '/\charg/p') ]]; then
+		set -- $(echo $WMII_NORMCOLORS)
+		color="$1 $3 $2"
+	elif [[ -n $(echo $level | sed -ne '/ .\%/p') ]]; then
+		set -- $(echo $WMII_FOCUSCOLORS)
+		color="#ff0000 $2 #ff0000"
+	else
+		set -- $(echo $WMII_NORMCOLORS)
+	fi
+	wmiir xwrite /rbar/$NAME $color $level
+	sleep 1m
+}

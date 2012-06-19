@@ -1,0 +1,17 @@
+#!/bin/zsh -f
+
+# wi_fnmenu LBar "$@" &
+
+source $WMII_PATH/keys
+
+button=$1
+case "$button" in
+	4)
+		# mouse up
+		$MODKEY-Prior
+		;;
+	5)
+		# mouse down
+		$MODKEY-Next
+		;;
+esac

@@ -1,0 +1,7 @@
+#!/bin/zsh -f
+
+NAME=$0:t
+wmiir remove /rbar/$NAME &>/dev/null
+echo | wmiir create /rbar/$NAME
+
+wmiir xwrite /rbar/$NAME $(hostname -f)

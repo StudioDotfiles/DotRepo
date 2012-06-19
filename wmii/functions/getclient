@@ -1,0 +1,7 @@
+#!/bin/zsh -f
+
+[[ -z "$1" ]] && (wmiir read /tag/sel/index ; exit)
+TAG=${2:-sel}
+
+# just ugly... but works ! ok, need refactoring with a clean sed command here...
+grep "^.* .* .* .* $1$" <(wmiir read /tag/$TAG/index) | cut -f2 -d' ' | head -n1

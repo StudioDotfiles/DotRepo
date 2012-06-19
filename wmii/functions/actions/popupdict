@@ -1,0 +1,11 @@
+#!/bin/zsh
+# simple popup dictionary, (c) 2007 by Robert Manea
+
+autoload wmii_dzen2
+
+LOOKUP=`sselp`
+
+(echo "$LOOKUP"; dict "$LOOKUP") | \
+wmii_dzen2 -l 8 -w 500 -bg darkblue -fg grey75 -x 300 -y 300 \
+-fn '-*-profont-*-*-*-*-11-*-*-*-*-*-iso8859' \
+-e 'onstart=scrollhome,uncollapse;button4=scrollup;button5=scrolldown;button1=exit'

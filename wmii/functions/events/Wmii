@@ -1,0 +1,111 @@
+#!/bin/zsh -f
+
+case "$1" in
+	term)
+		$WMII_TERM &
+		;;
+	autostart)
+		( for program in $WMII_PATH/programs/*(x); { $program &! ; } ) &
+		;;
+	keys)
+		# Define wmii keys
+		source $WMII_PATH/keys
+		functions | sed -n "s/^\($MODKEY-.*\) () {/\1/p" | wmiir write /keys
+		#functions | sed -n "s/^\($MODKEY-.*\|XF86.*\) () {/\1/p" | wmiir write /keys
+		;;
+	start)
+		rm -rf $WMII_LOGFILE
+		setopt ignorebraces globsubst
+		wmiir read /event |
+		while read ; do
+			print "[wmii] $REPLY" >> $WMII_LOGFILE
+			eval "$REPLY" &!
+		done
+		;;
+	lbar)
+		seltag="$(wmiir read /tag/sel/ctl 2>/dev/null)"
+		#seltag=$(wmiir read /tag/sel/ctl | sed 1q)
+		wmiir ls /lbar |
+		while read bar; do
+			wmiir remove "/lbar/$bar"
+		done
+		#wmiir rm $(wmiir ls -p /lbar) >/dev/null
+		wmiir ls /tag | sed -e 's|/||; /^sel$/d' |
+		while read tag; do
+			if [ "X$tag" = "X$seltag" ]; then
+				echo "$WMII_FOCUSCOLORS" "$tag" | wmiir create "/lbar/$tag"
+			else
+				echo "$WMII_NORMCOLORS" "$tag" | wmiir create "/lbar/$tag"
+			fi
+		done
+		;;
+	rbar)
+		echo | wmiir create "/rbar/ " # left separator
+		set +xv
+		for bar in $WMII_PATH/rbar/*(x); {
+			if wmiir remove /rbar/$bar 2>/dev/null; then
+				killall $bar:t &>/dev/null
+			fi
+			PATH=$WMII_PATH/rbar:$PATH nice -n 19 $bar &
+		}
+		;;
+	kill)
+		# xkill &
+		SEL=${2:-'sel'}
+		wmiir xwrite /client/$SEL/ctl kill
+		;;
+	destroy)
+		# xkill -9 &
+		SEL=${2:-'sel'}
+		wmiir xwrite /client/$SEL/ctl slay
+		;;
+	exec)
+		CMD=$@
+		;&
+	restart)
+		wmiir read /tag/sel/ctl | sed -n 1p > $WMII_VIEWFILE
+		wmiir xwrite /ctl exec ${CMD:-wmii}
+		;;
+	quit)
+		rm -f $WMII_VIEWFILE
+		wmiir xwrite /ctl quit
+		;;
+	lock)
+		$WMII_XLOCK
+		;;
+	help)
+		HELP_FILE=$TMPDIR/wmii.keys
+		sed -r -n -e '/^$/p' -e '/#+ /p' -e '/^[[:upper:]]+/s/(.*)/###\1/p' $WMII_PATH/environ | tr '#' '\t' > $HELP_FILE
+		sed -r -n -e '/^$/p' -e '/^#/p' -e 's/^(\w+=\w+)$/\t\t\1/p' -e 's/^function (.*) \{/\n\t\t\t\1/p' $WMII_PATH/keys | tr '#' '\t' >> $HELP_FILE
+		xmessage -file $HELP_FILE
+		rm -f $HELP_FILE
+		;;
+	fontsel)
+		wmiir xwrite /ctl font $(xfontsel -print)
+		;;
+	actions)
+		cd $WMII_PATH/functions/actions
+		actions=(*(x))
+		if [[ "$2" = '~~' ]]; then
+			do=$(wmii_9menu $actions)
+		elif [[ -n "$2" ]]; then
+			do="$2 "
+			shift 2
+			do+=$*
+		else
+			do=$(print -l $actions | wmii_dmenu -p Actions)
+		fi
+		eval $PWD/$do &!
+		;;
+	menu)
+		menus=(actions term lock kill fontsel help keys autostart rbar restart destroy quit)
+		if [[ -n "$2" ]]; then
+			menu=$(wmii_9menu $menus)
+		else
+			menu=$(print -l $menus | wmii_dmenu -p Wmii)
+		fi
+		echo "Wmii $menu" | wmiir write /event
+		;;
+	*)
+		;;
+esac
