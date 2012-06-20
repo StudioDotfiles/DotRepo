@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Session version="2.0.0" id-counter="2145">
+  <Config>
+    <Option name="output-auto-connect" value="2"/>
+    <Option name="input-auto-connect" value="1"/>
+    <Option name="mtc-port-name" value="control"/>
+    <Option name="mmc-port-name" value="control"/>
+    <Option name="midi-port-name" value="control"/>
+    <Option name="create-xrun-marker" value="yes"/>
+    <Option name="meter-falloff" value="32"/>
+    <end-marker-is-free val="no"/>
+  </Config>
+  <Sources/>
+  <Regions/>
+  <DiskStreams>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 1.1" speed="1" name="Audio 1" id="159"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 2.1" speed="1" name="Audio 2" id="174"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 3.1" speed="1" name="Audio 3" id="189"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 4.1" speed="1" name="Audio 4" id="204"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 5.1" speed="1" name="Audio 5" id="219"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 6.1" speed="1" name="Audio 6" id="234"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 7.1" speed="1" name="Audio 7" id="249"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 8.1" speed="1" name="Audio 8" id="264"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 9.1" speed="1" name="Audio 9" id="279"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 10.1" speed="1" name="Audio 10" id="294"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 11.1" speed="1" name="Audio 11" id="309"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 12.1" speed="1" name="Audio 12" id="324"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 13.1" speed="1" name="Audio 13" id="339"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 14.1" speed="1" name="Audio 14" id="354"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 15.1" speed="1" name="Audio 15" id="369"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 16.1" speed="1" name="Audio 16" id="384"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 17.1" speed="1" name="Audio 17" id="399"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 18.1" speed="1" name="Audio 18" id="414"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 19.1" speed="1" name="Audio 19" id="429"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 20.1" speed="1" name="Audio 20" id="444"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 21.1" speed="1" name="Audio 21" id="459"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 22.1" speed="1" name="Audio 22" id="474"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 23.1" speed="1" name="Audio 23" id="489"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 24.1" speed="1" name="Audio 24" id="504"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 25.1" speed="1" name="Audio 25" id="519"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 26.1" speed="1" name="Audio 26" id="534"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 27.1" speed="1" name="Audio 27" id="549"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 28.1" speed="1" name="Audio 28" id="564"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 29.1" speed="1" name="Audio 29" id="579"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 30.1" speed="1" name="Audio 30" id="594"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 31.1" speed="1" name="Audio 31" id="609"/>
+    <AudioDiskstream flags="Recordable" channels="1" playlist="Audio 32.1" speed="1" name="Audio 32" id="624"/>
+  </DiskStreams>
+  <Locations>
+    <Location id="2146" name="start" start="0" end="0" flags="IsMark,IsStart" locked="no"/>
+    <Location id="2147" name="end" start="13230000" end="13230000" flags="IsMark,IsEnd" locked="no"/>
+  </Locations>
+  <Connections/>
+  <Routes>
+    <Route flags="MasterOut" default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=0:signal=0">
+      <IO name="master" id="18" active="yes" inputs="{Audio 32/out 1,Audio 31/out 1,Audio 30/out 1,Audio 29/out 1,Audio 28/out 1,Audio 27/out 1,Audio 26/out 1,Audio 25/out 1,Audio 24/out 1,Audio 23/out 1,Audio 22/out 1,Audio 21/out 1,Audio 20/out 1,Audio 19/out 1,Audio 18/out 1,Audio 17/out 1,Audio 16/out 1,Audio 15/out 1,Audio 14/out 1,Audio 13/out 1,Audio 12/out 1,Audio 11/out 1,Audio 10/out 1,Audio 9/out 1,Audio 8/out 1,Audio 7/out 1,Audio 6/out 1,Audio 5/out 1,Audio 4/out 1,Audio 3/out 1,Audio 2/out 1,Audio 1/out 1}{Audio 32/out 2,Audio 31/out 2,Audio 30/out 2,Audio 29/out 2,Audio 28/out 2,Audio 27/out 2,Audio 26/out 2,Audio 25/out 2,Audio 24/out 2,Audio 23/out 2,Audio 22/out 2,Audio 21/out 2,Audio 20/out 2,Audio 19/out 2,Audio 18/out 2,Audio 17/out 2,Audio 16/out 2,Audio 15/out 2,Audio 14/out 2,Audio 13/out 2,Audio 12/out 2,Audio 11/out 2,Audio 10/out 2,Audio 9/out 2,Audio 8/out 2,Audio 7/out 2,Audio 6/out 2,Audio 5/out 2,Audio 4/out 2,Audio 3/out 2,Audio 2/out 2,Audio 1/out 2}" outputs="{system:playback_1}{system:playback_2}" gain="1.000000000000" iolimits="-1,2,-1,2">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="140" default="0" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="139"/>
+          </StreamPanner>
+          <StreamPanner x="1" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="143" default="1" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="142"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="19"/>
+      </IO>
+      <controllable name="solo" id="22"/>
+      <controllable name="mute" id="23"/>
+      <remote_control id="1"/>
+      <extra>
+        <GUI color="15637:41916:41053" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=1:signal=1" mode="Normal" diskstream-id="159">
+      <IO name="Audio 1" id="152" active="yes" inputs="{system:capture_1}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="164" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="163"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="153"/>
+      </IO>
+      <controllable name="solo" id="156"/>
+      <controllable name="mute" id="157"/>
+      <remote_control id="2"/>
+      <extra>
+        <GUI color="4802:28413:17777" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="913"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=2:signal=2" mode="Normal" diskstream-id="174">
+      <IO name="Audio 2" id="167" active="yes" inputs="{system:capture_2}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="179" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="178"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="168"/>
+      </IO>
+      <controllable name="solo" id="171"/>
+      <controllable name="mute" id="172"/>
+      <remote_control id="3"/>
+      <extra>
+        <GUI color="15141:2288:19308" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="923"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=3:signal=3" mode="Normal" diskstream-id="189">
+      <IO name="Audio 3" id="182" active="yes" inputs="{system:capture_3}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="194" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="193"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="183"/>
+      </IO>
+      <controllable name="solo" id="186"/>
+      <controllable name="mute" id="187"/>
+      <remote_control id="4"/>
+      <extra>
+        <GUI color="33148:16800:23168" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="933"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=4:signal=4" mode="Normal" diskstream-id="204">
+      <IO name="Audio 4" id="197" active="yes" inputs="{system:capture_4}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="209" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="208"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="198"/>
+      </IO>
+      <controllable name="solo" id="201"/>
+      <controllable name="mute" id="202"/>
+      <remote_control id="5"/>
+      <extra>
+        <GUI color="27592:5421:18866" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="943"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=5:signal=5" mode="Normal" diskstream-id="219">
+      <IO name="Audio 5" id="212" active="yes" inputs="{system:capture_5}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="224" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="223"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="213"/>
+      </IO>
+      <controllable name="solo" id="216"/>
+      <controllable name="mute" id="217"/>
+      <remote_control id="6"/>
+      <extra>
+        <GUI color="47133:15808:21288" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="953"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=6:signal=6" mode="Normal" diskstream-id="234">
+      <IO name="Audio 6" id="227" active="yes" inputs="{system:capture_6}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="239" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="238"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="228"/>
+      </IO>
+      <controllable name="solo" id="231"/>
+      <controllable name="mute" id="232"/>
+      <remote_control id="7"/>
+      <extra>
+        <GUI color="37430:23819:10772" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="963"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=7:signal=7" mode="Normal" diskstream-id="249">
+      <IO name="Audio 7" id="242" active="yes" inputs="{system:capture_7}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="254" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="253"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="243"/>
+      </IO>
+      <controllable name="solo" id="246"/>
+      <controllable name="mute" id="247"/>
+      <remote_control id="8"/>
+      <extra>
+        <GUI color="36819:17760:29960" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="973"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=8:signal=8" mode="Normal" diskstream-id="264">
+      <IO name="Audio 8" id="257" active="yes" inputs="{system:capture_8}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="269" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="268"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="258"/>
+      </IO>
+      <controllable name="solo" id="261"/>
+      <controllable name="mute" id="262"/>
+      <remote_control id="9"/>
+      <extra>
+        <GUI color="13697:6698:15793" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="983"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=9:signal=9" mode="Normal" diskstream-id="279">
+      <IO name="Audio 9" id="272" active="yes" inputs="{system:capture_9}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="284" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="283"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="273"/>
+      </IO>
+      <controllable name="solo" id="276"/>
+      <controllable name="mute" id="277"/>
+      <remote_control id="10"/>
+      <extra>
+        <GUI color="25229:2061:37759" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="993"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=10:signal=10" mode="Normal" diskstream-id="294">
+      <IO name="Audio 10" id="287" active="yes" inputs="{system:capture_10}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="299" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="298"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="288"/>
+      </IO>
+      <controllable name="solo" id="291"/>
+      <controllable name="mute" id="292"/>
+      <remote_control id="11"/>
+      <extra>
+        <GUI color="13523:43114:41748" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1003"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=11:signal=11" mode="Normal" diskstream-id="309">
+      <IO name="Audio 11" id="302" active="yes" inputs="{system:capture_11}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="314" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="313"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="303"/>
+      </IO>
+      <controllable name="solo" id="306"/>
+      <controllable name="mute" id="307"/>
+      <remote_control id="12"/>
+      <extra>
+        <GUI color="7439:1244:34902" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1013"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=12:signal=12" mode="Normal" diskstream-id="324">
+      <IO name="Audio 12" id="317" active="yes" inputs="{system:capture_12}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="329" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="328"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="318"/>
+      </IO>
+      <controllable name="solo" id="321"/>
+      <controllable name="mute" id="322"/>
+      <remote_control id="13"/>
+      <extra>
+        <GUI color="35852:8904:38395" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1023"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=13:signal=13" mode="Normal" diskstream-id="339">
+      <IO name="Audio 13" id="332" active="yes" inputs="{system:capture_13}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="344" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="343"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="333"/>
+      </IO>
+      <controllable name="solo" id="336"/>
+      <controllable name="mute" id="337"/>
+      <remote_control id="14"/>
+      <extra>
+        <GUI color="26493:20424:23543" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1033"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=14:signal=14" mode="Normal" diskstream-id="354">
+      <IO name="Audio 14" id="347" active="yes" inputs="{system:capture_14}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="359" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="358"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="348"/>
+      </IO>
+      <controllable name="solo" id="351"/>
+      <controllable name="mute" id="352"/>
+      <remote_control id="15"/>
+      <extra>
+        <GUI color="43293:27643:39487" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1043"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=15:signal=15" mode="Normal" diskstream-id="369">
+      <IO name="Audio 15" id="362" active="yes" inputs="{system:capture_15}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="374" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="373"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="363"/>
+      </IO>
+      <controllable name="solo" id="366"/>
+      <controllable name="mute" id="367"/>
+      <remote_control id="16"/>
+      <extra>
+        <GUI color="37067:931:38621" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1053"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=16:signal=16" mode="Normal" diskstream-id="384">
+      <IO name="Audio 16" id="377" active="yes" inputs="{system:capture_16}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="389" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="388"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="378"/>
+      </IO>
+      <controllable name="solo" id="381"/>
+      <controllable name="mute" id="382"/>
+      <remote_control id="17"/>
+      <extra>
+        <GUI color="4875:11704:16403" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1063"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=17:signal=17" mode="Normal" diskstream-id="399">
+      <IO name="Audio 17" id="392" active="yes" inputs="{system:capture_17}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="404" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="403"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="393"/>
+      </IO>
+      <controllable name="solo" id="396"/>
+      <controllable name="mute" id="397"/>
+      <remote_control id="18"/>
+      <extra>
+        <GUI color="17046:30016:41574" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1073"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=18:signal=18" mode="Normal" diskstream-id="414">
+      <IO name="Audio 18" id="407" active="yes" inputs="{system:capture_18}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="419" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="418"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="408"/>
+      </IO>
+      <controllable name="solo" id="411"/>
+      <controllable name="mute" id="412"/>
+      <remote_control id="19"/>
+      <extra>
+        <GUI color="34806:45809:7271" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1083"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=19:signal=19" mode="Normal" diskstream-id="429">
+      <IO name="Audio 19" id="422" active="yes" inputs="{system:capture_19}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="434" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="433"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="423"/>
+      </IO>
+      <controllable name="solo" id="426"/>
+      <controllable name="mute" id="427"/>
+      <remote_control id="20"/>
+      <extra>
+        <GUI color="41504:23921:20853" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1093"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=20:signal=20" mode="Normal" diskstream-id="444">
+      <IO name="Audio 20" id="437" active="yes" inputs="{system:capture_20}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="449" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="448"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="438"/>
+      </IO>
+      <controllable name="solo" id="441"/>
+      <controllable name="mute" id="442"/>
+      <remote_control id="21"/>
+      <extra>
+        <GUI color="31918:6021:22728" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1103"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=21:signal=21" mode="Normal" diskstream-id="459">
+      <IO name="Audio 21" id="452" active="yes" inputs="{system:capture_21}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="464" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="463"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="453"/>
+      </IO>
+      <controllable name="solo" id="456"/>
+      <controllable name="mute" id="457"/>
+      <remote_control id="22"/>
+      <extra>
+        <GUI color="27032:29276:30168" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1113"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=22:signal=22" mode="Normal" diskstream-id="474">
+      <IO name="Audio 22" id="467" active="yes" inputs="{system:capture_22}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="479" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="478"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="468"/>
+      </IO>
+      <controllable name="solo" id="471"/>
+      <controllable name="mute" id="472"/>
+      <remote_control id="23"/>
+      <extra>
+        <GUI color="16628:19671:6372" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1123"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=23:signal=23" mode="Normal" diskstream-id="489">
+      <IO name="Audio 23" id="482" active="yes" inputs="{system:capture_23}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="494" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="493"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="483"/>
+      </IO>
+      <controllable name="solo" id="486"/>
+      <controllable name="mute" id="487"/>
+      <remote_control id="24"/>
+      <extra>
+        <GUI color="13884:31567:32865" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1133"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=24:signal=24" mode="Normal" diskstream-id="504">
+      <IO name="Audio 24" id="497" active="yes" inputs="{system:capture_24}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="509" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="508"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="498"/>
+      </IO>
+      <controllable name="solo" id="501"/>
+      <controllable name="mute" id="502"/>
+      <remote_control id="25"/>
+      <extra>
+        <GUI color="34309:23054:16511" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1143"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=25:signal=25" mode="Normal" diskstream-id="519">
+      <IO name="Audio 25" id="512" active="yes" inputs="{system:capture_25}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="524" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="523"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="513"/>
+      </IO>
+      <controllable name="solo" id="516"/>
+      <controllable name="mute" id="517"/>
+      <remote_control id="26"/>
+      <extra>
+        <GUI color="13952:2027:5578" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1153"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=26:signal=26" mode="Normal" diskstream-id="534">
+      <IO name="Audio 26" id="527" active="yes" inputs="{system:capture_26}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="539" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="538"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="528"/>
+      </IO>
+      <controllable name="solo" id="531"/>
+      <controllable name="mute" id="532"/>
+      <remote_control id="27"/>
+      <extra>
+        <GUI color="14883:6782:46805" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1163"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=27:signal=27" mode="Normal" diskstream-id="549">
+      <IO name="Audio 27" id="542" active="yes" inputs="{system:capture_27}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="554" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="553"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="543"/>
+      </IO>
+      <controllable name="solo" id="546"/>
+      <controllable name="mute" id="547"/>
+      <remote_control id="28"/>
+      <extra>
+        <GUI color="14939:357:15851" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1173"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=28:signal=28" mode="Normal" diskstream-id="564">
+      <IO name="Audio 28" id="557" active="yes" inputs="{system:capture_28}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="569" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="568"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="558"/>
+      </IO>
+      <controllable name="solo" id="561"/>
+      <controllable name="mute" id="562"/>
+      <remote_control id="29"/>
+      <extra>
+        <GUI color="44956:43980:39009" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1183"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=29:signal=29" mode="Normal" diskstream-id="579">
+      <IO name="Audio 29" id="572" active="yes" inputs="{system:capture_29}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="584" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="583"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="573"/>
+      </IO>
+      <controllable name="solo" id="576"/>
+      <controllable name="mute" id="577"/>
+      <remote_control id="30"/>
+      <extra>
+        <GUI color="31117:16833:20866" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1193"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=30:signal=30" mode="Normal" diskstream-id="594">
+      <IO name="Audio 30" id="587" active="yes" inputs="{system:capture_30}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="599" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="598"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="588"/>
+      </IO>
+      <controllable name="solo" id="591"/>
+      <controllable name="mute" id="592"/>
+      <remote_control id="31"/>
+      <extra>
+        <GUI color="43390:39562:4784" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1203"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=31:signal=31" mode="Normal" diskstream-id="609">
+      <IO name="Audio 31" id="602" active="yes" inputs="{system:capture_31}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="614" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="613"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="603"/>
+      </IO>
+      <controllable name="solo" id="606"/>
+      <controllable name="mute" id="607"/>
+      <remote_control id="32"/>
+      <extra>
+        <GUI color="37764:10082:20168" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1213"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=32:signal=32" mode="Normal" diskstream-id="624">
+      <IO name="Audio 32" id="617" active="yes" inputs="{system:capture_32}" outputs="{master/in 1}{master/in 2}" gain="1.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="629" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="628"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="618"/>
+      </IO>
+      <controllable name="solo" id="621"/>
+      <controllable name="mute" id="622"/>
+      <remote_control id="33"/>
+      <extra>
+        <GUI color="19040:4806:25149" strip_width="Wide" shown_mixer="yes" height="64" shown_editor="yes">
+          <gain shown="no" height="64"/>
+          <pan shown="no" height="64"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="1223"/>
+    </Route>
+  </Routes>
+  <EditGroups/>
+  <MixGroups/>
+  <Playlists/>
+  <UnusedPlaylists/>
+  <Click>
+    <IO name="click" id="24" active="yes" inputs="" outputs="{system:playback_1}{system:playback_2}" gain="1.000000000000" iolimits="0,0,-1,-1">
+      <Panner linked="no" link_direction="SameDirection" bypassed="no">
+        <Output x="0" y="0"/>
+        <Output x="1" y="0"/>
+        <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+          <Automation>
+            <AutomationList id="137" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+          </Automation>
+          <controllable name="panner" id="136"/>
+        </StreamPanner>
+      </Panner>
+      <controllable name="gaincontrol" id="25"/>
+    </IO>
+  </Click>
+  <TempoMap>
+    <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
+    <Meter start="1|1|0" note-type="4.000000" beats-per-bar="4.000000" movable="no"/>
+  </TempoMap>
+  <ControlProtocols>
+    <Protocol name="Mackie" active="no"/>
+    <Protocol name="Generic MIDI" active="no"/>
+  </ControlProtocols>
+  <extra>
+    <RulerVisibility smpte="no" bbt="no" frames="no" minsec="yes" tempo="no" meter="no" marker="yes" rangemarker="no" transportmarker="no" cdmarker="no"/>
+  </extra>
+</Session>
