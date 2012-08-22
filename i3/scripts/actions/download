@@ -1,0 +1,11 @@
+#!/bin/zsh -f
+
+cd $TMPDIR
+
+fpath+=$WMII_PATH/functions
+autoload zargs
+autoload dmenu
+
+
+command wget $(zargs "${*:-$(sselp)}" | dmenu -p download)
+notify-send "Downloaded in '$TMPDIR'."

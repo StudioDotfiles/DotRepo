@@ -1,0 +1,3 @@
+#!/bin/zsh -f
+
+urxvtd -e "urlview =(echo '${*:-$(sselp)}')"

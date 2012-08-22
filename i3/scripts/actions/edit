@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+#run-mailcap --action=edit "${*:-$(sselp)}"
+geany "${*:-$(sselp)}"

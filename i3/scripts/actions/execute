@@ -1,0 +1,3 @@
+#!/bin/zsh -f
+
+urxvtc -e sh -c "$(sselp)"
