@@ -10,7 +10,7 @@
     <Option name="minimum-disk-io-bytes" value="262144"/>
     <Option name="track-buffer-seconds" value="5"/>
     <Option name="disk-choice-space-threshold" value="57600000"/>
-    <Option name="xfade-model" value="0"/>
+    <Option name="xfade-model" value="1"/>
     <Option name="auto-xfade" value="yes"/>
     <Option name="destructive-xfade-msecs" value="20"/>
     <Option name="mute-affects-pre-fader" value="yes"/>
@@ -22,7 +22,7 @@
     <Option name="create-xrun-marker" value="yes"/>
     <Option name="stop-at-session-end" value="no"/>
     <Option name="seamless-loop" value="yes"/>
-    <Option name="quieten-at-speed" value="no"/>
+    <Option name="quieten-at-speed" value="yes"/>
     <Option name="show-track-meters" value="no"/>
     <Option name="jack-time-master" value="yes"/>
     <Option name="smpte-format" value="6"/>
@@ -32,7 +32,7 @@
     <Option name="periodic-safety-backups" value="yes"/>
     <Option name="periodic-safety-backup-interval" value="120"/>
     <Option name="default-narrow_ms" value="no"/>
-    <Option name="font-scale" value="87654"/>
+    <Option name="font-scale" value="102400"/>
   </Config>
   <extra>
     <RulerVisibility smpte="yes" bbt="yes" frames="no" minsec="no" tempo="yes" meter="yes" marker="yes" rangemarker="no" transportmarker="yes" cdmarker="no"/>

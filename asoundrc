@@ -1,11 +1,3 @@
-pcm.rme9636_1 {
-	type hw
-	card 1
-}
-ctl.rme9636_1 {
-	type hw
-	card 1
-}
 pcm.rme9636_0 {
 	type hw
 	card 0
@@ -13,6 +5,14 @@ pcm.rme9636_0 {
 ctl.rme9636_0 {
 	type hw
 	card 0
+}
+pcm.rme9636_1 {
+	type hw
+	card 1
+}
+ctl.rme9636_1 {
+	type hw
+	card 1
 }
 ctl.rme9636_64 {
 	type hw
@@ -27,7 +27,7 @@ pcm.rme9636_64 {
 	slaves.b.channels 18;
 
 
-	# Use rme9636_0 ch 0-7 mapped to ALSA ch 0-7
+	# Use rme9636_0 ch 0-15 mapped to ALSA ch 0-15
 
 	bindings.0.slave a;
 	bindings.0.channel 0;

@@ -1,7 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <instant>
-  <Mixer narrow-strips="no" show-mixer="no"/>
-  <Editor id="12" zoom-focus="0" zoom="78491.848000" snap-to="11" snap-mode="0" edit-point="EditAtMouse" playhead="28450816" show-waveforms="yes" show-waveforms-rectified="no" show-waveforms-recording="yes" show-measures="yes" follow-playhead="yes" stationary-playhead="no" xfades-visible="yes" region-list-sort-type="ByEndInFile" mouse-mode="MouseObject" show-editor-mixer="no">
-    <geometry x_size="1022" y_size="703" x_pos="0" y_pos="16" x_off="1" y_off="32" edit_pane_pos="922"/>
+  <ExportDialog sample_rate="44.1kHz" src_quality="best" dither_type="None" channel_count="stereo" header_format="WAV" bitdepth_format="16 bit" endian_format="Little-endian (Intel)" filename="/media/sdb1/Circumflex/JijKuntErbij/export/JijKuntErbijVocals.wav" cue_file_type="None">
+    <Tracks>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+      <Track channel1="off" channel2="off"/>
+    </Tracks>
+  </ExportDialog>
+  <Editor id="11" zoom-focus="3" zoom="93306.966292" snap-to="12" snap-mode="1" edit-point="EditAtPlayhead" playhead="21629952" show-waveforms="yes" show-waveforms-rectified="no" show-waveforms-recording="yes" show-measures="no" follow-playhead="no" stationary-playhead="no" xfades-visible="yes" region-list-sort-type="ByName" mouse-mode="MouseZoom" show-editor-mixer="no">
+    <geometry x_size="1020" y_size="729" x_pos="0" y_pos="0" x_off="2" y_off="18" edit_pane_pos="920"/>
   </Editor>
+  <Mixer narrow-strips="no" show-mixer="yes">
+    <geometry x_size="1020" y_size="729" x_pos="1" y_pos="1" x_off="0" y_off="0" mixer_rhs_pane1_pos="243" mixer_list_hpane_pos="75"/>
+  </Mixer>
 </instant>

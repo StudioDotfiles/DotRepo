@@ -47,7 +47,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 if [[ -n "$ZSHRUN" ]]; then
     unset ZSHRUN
     function _accept_and_quit1() {
-        #zsh -c "${BUFFER}" &|
+        zsh -c "${BUFFER}" &|
         exit
     }
     function _cancel_zshrun() {
@@ -59,3 +59,14 @@ if [[ -n "$ZSHRUN" ]]; then
     PROMPT="zshrun %~> "
     RPROMPT=""
 fi
+
+########################################################################
+# aliases
+########################################################################
+
+#always use ls with color
+alias ls='ls -F --group-directories-first -h --color'
+
+#todo:fix
+#colors for dmenu
+#alias dmenu='dmenu -b -i -nb \#DCDAD5 -nf \#3F3F3F -sb \#ffff00 -sf \#000000'

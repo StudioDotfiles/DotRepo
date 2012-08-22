@@ -1,3 +1,4 @@
 #!/bin/zsh -f
 
 cat $WMII_VIEWFILE || wmiir read /ctl | sed -n 's/view \(.*\)/\1/p' || print "1"
+xmessage last:$(wmiir read /ctl | sed -n 's/view \(.*\)/\1/p')
