@@ -1,3 +1,4 @@
-#!/bin/zsh -f
+#!/bin/zsh
 
-urxvtc -e sh -c "$(sselp)"
+urxvtc -e $(sselp)
+#urxvtc -e sh -c "$(sselp)"

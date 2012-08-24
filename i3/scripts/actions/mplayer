@@ -1,7 +1,0 @@
-#!/bin/zsh
-
-fpath+=$WMII_PATH/functions
-autoload zargs
-autoload wmii_dmenu
-
-command mplayer $(zargs "${*:-$(sselp)}" | wmii_dmenu -p mplayer)

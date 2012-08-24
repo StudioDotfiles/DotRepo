@@ -1,4 +1,0 @@
-#!/bin/zsh -f
-
-# Url should be escaped because of Wmii eval statement
-./open "http://dictionary.die.net/?q=$(sselp)*"

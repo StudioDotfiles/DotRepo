@@ -1,4 +1,6 @@
 #!/bin/zsh
 
-# http://portland.freedesktop.org/wiki/EmailConfig
-xdg-email ${*:-$(sselp)}
+# todo: make it check and remove "mailto:" in sselp
+
+evolution mailto:${*:-$(sselp)}
+

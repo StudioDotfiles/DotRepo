@@ -1,3 +1,0 @@
-#!/bin/zsh -f
-
-./open "http://www.cnrtl.fr/lexicographie/$(sselp)"

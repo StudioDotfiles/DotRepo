@@ -1,8 +1,8 @@
 #!/bin/zsh
 
-fpath+=$WMII_PATH/functions
-autoload wmii_9menu
+#fpath+=$WMII_PATH/functions
+#autoload wmii_9menu
 
 hosts=($(egrep -h "^Host" ~/.ssh/config.d/* | cut -f2 -d ' ' | grep -v '*' | tr '\n' ' '))
-host=$(wmii_9menu $hosts)
-[[ -n $host ]] && $WMII_TERM -e ssh $host
+host=$(dmenu $hosts)
+[[ -n $host ]] && $COLORTERM -e ssh $host
