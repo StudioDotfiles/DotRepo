@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# ardour2Bformat.zsh Copyright (C) 2012 Bart Brouns
+# ardour2ardourBformat.zsh Copyright (C) 2012 Bart Brouns
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -20,7 +20,15 @@ then
 	echo "Converts a folder with A-format recordings done in Ardour to B-format files."
 	echo "If you don't have a ambisonic microphone, you don't need this :)"
 	echo
-	echo "Usage: zsh ardour2Bformat.zsh <options> <config file> <input dir> <output dir>"
+	echo "This version outputs the files with the original names,"
+	echo "so If you use the inputdir as outputdir, it overwrites the originals!!"
+	echo "That can be usefull if you just recorded a lot of A-format tracks,"
+	echo "and want to use them without having to buss each track trough tetraproc"
+	echo
+	echo "If you want 4-channel output files, use ardour2Bformat.zsh"
+	echo
+	echo
+	echo "Usage: zsh ardour2ardourBformat.zsh <options> <config file> <input dir> <output dir>"
 	echo
 	echo "Options:"
 	echo "  Display this text:     --help"

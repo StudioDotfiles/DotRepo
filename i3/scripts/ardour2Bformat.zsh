@@ -20,6 +20,14 @@ then
 	echo "Converts a folder with A-format recordings done in Ardour to B-format files."
 	echo "If you don't have a ambisonic microphone, you don't need this :)"
 	echo
+	echo "This version outputs the B-format files into 4-channel files, with names like:"
+	echo "Something-Number%a-B-format.wav"
+	echo "Where Something-Number%a.wav  is the fist channel of the ambisonic file."
+	echo "It doesn't overwrite the original files"
+	echo
+	echo "If you want 4 mono files as output, so you can use them in ardour,"
+	echo "use ardour2ardourBformat.zsh"
+	echo
 	echo "Usage: zsh ardour2Bformat.zsh <options> <config file> <input dir> <output dir>"
 	echo
 	echo "Options:"
