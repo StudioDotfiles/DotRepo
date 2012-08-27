@@ -161,7 +161,7 @@ else
 		# make it B-format
 		
 		tetrafile $argv[1,-3] /tmp/ardour2BformatA.wav /tmp/ardour2BformatB.wav		
-		sndfile-deinterleave /tmp/ardour2BformatB.wav
+		sndfile-deinterleave /tmp/ardour2BformatB.wav > /dev/null
 		echo
 		
 		mv /tmp/ardour2BformatB_00.wav $argv[-1]/$InputFileA
@@ -175,7 +175,9 @@ else
 	then
 		echo "##################################################################"
 		echo "#####################    WARNING    ##############################" 
+		echo
 	    cat /tmp/ardour2BformatErrors.txt
+	    echo
 	    echo "##################################################################"
 	    echo "################  end of WARNING    ##############################"
 	    rm /tmp/ardour2BformatErrors.txt
