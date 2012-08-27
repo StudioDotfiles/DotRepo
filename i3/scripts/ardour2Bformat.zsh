@@ -98,18 +98,18 @@ else
 						else # a candidate track has allready been found
 							if [[ "$SearchTrack[1,-7]" == "$TrackNameDashNumber" ]]; 
 							then # check if it has the same number
-								echo There are two files ending in %$postfix.wav with the same size as	$InputFileA:
-								echo $InputFile[$i] and $SearchTrack.
-								echo Since it matches the number of $InputFileA, I\'m using				$SearchTrack.
-								echo You should check in your .ardour file If that assumtion is correct.
-								echo
+								echo There are two files ending in %$postfix.wav with the same size as	$InputFileA:			>> /tmp/ardour2BformatErrors.txt
+								echo $InputFile[$i] and $SearchTrack.															>> /tmp/ardour2BformatErrors.txt
+								echo Since it matches the number of $InputFileA, I\'m using				$SearchTrack.			>> /tmp/ardour2BformatErrors.txt
+								echo You should check in your .ardour file If that assumtion is correct.						>> /tmp/ardour2BformatErrors.txt
+								echo																							>> /tmp/ardour2BformatErrors.txt
 								InputFile[$i]=$SearchTrack # overwrite the candidate. todo: check if this works in all cases
 							else
-								echo There are two files ending in %$postfix.wav with the same size as	$InputFileA:
-								echo $InputFile[$i] and $SearchTrack.
-								echo Since it matches the number of $InputFileA, I\'m using				$InputFile[$i].
-								echo You should check in your .ardour file If that assumtion is correct.
-								echo 
+								echo There are two files ending in %$postfix.wav with the same size as	$InputFileA:			>> /tmp/ardour2BformatErrors.txt
+								echo $InputFile[$i] and $SearchTrack.															>> /tmp/ardour2BformatErrors.txt
+								echo Since it matches the number of $InputFileA, I\'m using				$InputFile[$i].			>> /tmp/ardour2BformatErrors.txt
+								echo You should check in your .ardour file If that assumtion is correct.						>> /tmp/ardour2BformatErrors.txt
+								echo 																							>> /tmp/ardour2BformatErrors.txt
 							fi # check if it has the same number
 						fi # if no file candidate yet
 					fi #if same size
@@ -135,15 +135,25 @@ else
 		echo
 		
 		# merge the 4 files into one 
-		sndfile-interleave $InputFileA $InputFile[1] $InputFile[2] $InputFile[3] -o /tmp/ardour2Bformat.tmp
+		sndfile-interleave $InputFileA $InputFile[1] $InputFile[2] $InputFile[3] -o /tmp/ardour2Bformat.wav
 		
 		# make it B-format
-		#echo 	tetrafile $argv[1,-3] /tmp/ardour2Bformat.tmp $argv[-1]/$TrackNameDashNumber%a-B-format.wav
-		tetrafile $argv[1,-3] /tmp/ardour2Bformat.tmp $argv[-1]/$TrackNameDashNumber%a-B-format.wav
+		#echo 	tetrafile $argv[1,-3] /tmp/ardour2Bformat.wav $argv[-1]/$TrackNameDashNumber%a-B-format.wav
+		tetrafile $argv[1,-3] /tmp/ardour2Bformat.wav $argv[-1]/$TrackNameDashNumber%a-B-format.wav
 		
 	done # for InputFileA in *<0-9999>%a.wav(.L+56)
 	
-	rm /tmp/ardour2Bformat.tmp
+	if [ -f /tmp/ardour2BformatErrors.txt ]
+	then
+		echo "##################################################################"
+		echo "#####################    WARNING    ##############################" 
+	    cat /tmp/ardour2BformatErrors.txt
+	    echo "##################################################################"
+	    echo "################  end of WARNING    ##############################"
+	    rm /tmp/ardour2BformatErrors.txt
+	fi
+	
+	rm /tmp/ardour2Bformat.wav
 
 fi	# check number of arguments
 exit 0;
