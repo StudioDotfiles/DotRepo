@@ -32,7 +32,7 @@
     <Option name="periodic-safety-backups" value="yes"/>
     <Option name="periodic-safety-backup-interval" value="120"/>
     <Option name="default-narrow_ms" value="no"/>
-    <Option name="font-scale" value="102400"/>
+    <Option name="font-scale" value="102604"/>
   </Config>
   <extra>
     <RulerVisibility smpte="yes" bbt="yes" frames="no" minsec="no" tempo="yes" meter="yes" marker="yes" rangemarker="no" transportmarker="yes" cdmarker="no"/>
@@ -68,6 +68,8 @@
   </extra>
   <ControlProtocols>
     <Protocol name="Mackie" active="no"/>
-    <Protocol name="Generic MIDI" active="no"/>
+    <Protocol name="Generic MIDI" feedback="0" feedback_interval="10000" active="yes">
+      <controls/>
+    </Protocol>
   </ControlProtocols>
 </Ardour>

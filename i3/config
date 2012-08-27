@@ -26,8 +26,9 @@ set $mon_ext VGA1
 
 # {{{ Apparence
 # font for window titles. ISO 10646 = Unicode
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font -*-*-medium-*-*-*-14-*-*-*-*-*-*-*
+#font -*-*-medium-*-*-*-15-*-*-*-*-*-*-*
+font -*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*
+
 
 # Invertable colorscheme:
 set $focusBG		#ffff00
@@ -190,10 +191,10 @@ mode "resize" {
         # Pressing down will grow the window’s height.
         
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10px or 1 ppt
-        bindsym Right resize grow width 10 px or 1 ppt
-        bindsym Up resize shrink height 10 px or 1 ppt
-        bindsym Down resize grow height 10 px or 1 ppt
+        bindsym Left resize shrink width 10px or 4 ppt
+        bindsym Right resize grow width 10 px or 4 ppt
+        bindsym Up resize shrink height 10 px or 4 ppt
+        bindsym Down resize grow height 10 px or 4 ppt
         
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -237,6 +238,8 @@ bindsym $win+m mode "monitor_select" ; exec notify-send "Monitor select: 1(one) 
 ########################################################################
 #	program keybindings
 ########################################################################
+
+bindsym Ctrl+$alt+l exec i3lock -d -c DCDAD5
 
 #audio volume and mute
 #does not apply on RME-9636
@@ -351,6 +354,6 @@ exec parcellite
 # start the terminal deamon
 exec urxvtd -q -o -f
 #enable dunst for notify-send
-exec dunst -nb '$urgentBG' -nf '$focusBG' -geometry 0x3-100+0 -fn '-*-*-medium-*-*-*-18-*-*-*-*-*-*-*'
+exec dunst -nb '$urgentBG' -nf '$focusBG' -geometry 0x3-100+0 -fn '-*-terminus-*-*-*-*-32-*-*-*-*-*-*-*'
 
 

@@ -1,0 +1,26 @@
+#!/bin/zsh -f
+
+#
+cd /media/sdb1/tmp
+
+for inputfile in *%[a].wav
+do
+ #filename=("${(s/%/)inputfile}")
+ filename=("${(s/%/)inputfile}")
+ sndfile-interleave $filename[1]%a.wav $filename[1]%b.wav $filename[1]%c.wav $filename[1]%d.wav -o FileWithUnlikelyNameWillBeDeleted.tmp
+ tetrafile --wav ~/.tetraproc/CS2069-def.tetra  FileWithUnlikelyNameWillBeDeleted.tmp $filename[1]_B-format.wav
+ rm FileWithUnlikelyNameWillBeDeleted.tmp
+ echo $filename[1]_B-format.wav 
+ 
+done
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
