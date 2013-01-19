@@ -11,7 +11,7 @@ order += "ethernet eth0"
 #order += "ethernet eth1"
 #order += "battery 0"
 order += "cpu_usage"
-order += "cpu_temperature 0"
+#order += "cpu_temperature 0"
 order += "time"
 
 wireless wlan0 {
@@ -57,14 +57,14 @@ cpu_temperature 0 {
 }
 
 disk "/" {
-        format = "/: %free"
+        format = "/: %avail"
 }
 
 disk "/media/sda9" {
-        format = "/media/sda9: %free"
+        format = "/media/sda9: %avail"
 }
 
 
 disk "/media/sdb1" {
-        format = "/media/sdb1: %free"
+        format = "/media/sdb1: %avail"
 }

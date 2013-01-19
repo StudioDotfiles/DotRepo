@@ -12,19 +12,19 @@
     <Option name="disk-choice-space-threshold" value="57600000"/>
     <Option name="xfade-model" value="1"/>
     <Option name="auto-xfade" value="yes"/>
-    <Option name="destructive-xfade-msecs" value="20"/>
+    <Option name="destructive-xfade-msecs" value="2"/>
     <Option name="mute-affects-pre-fader" value="yes"/>
     <Option name="mute-affects-post-fader" value="yes"/>
     <Option name="mute-affects-control-outs" value="yes"/>
     <Option name="mute-affects-main-outs" value="yes"/>
     <Option name="plugins-stop-with-transport" value="no"/>
-    <Option name="stop-recording-on-xrun" value="no"/>
+    <Option name="stop-recording-on-xrun" value="yes"/>
     <Option name="create-xrun-marker" value="yes"/>
     <Option name="stop-at-session-end" value="no"/>
     <Option name="seamless-loop" value="yes"/>
     <Option name="quieten-at-speed" value="yes"/>
     <Option name="show-track-meters" value="no"/>
-    <Option name="jack-time-master" value="yes"/>
+    <Option name="jack-time-master" value="no"/>
     <Option name="smpte-format" value="6"/>
     <Option name="timecode-source-is-synced" value="yes"/>
     <Option name="no-new-session-dialog" value="yes"/>
@@ -68,8 +68,6 @@
   </extra>
   <ControlProtocols>
     <Protocol name="Mackie" active="no"/>
-    <Protocol name="Generic MIDI" feedback="0" feedback_interval="10000" active="yes">
-      <controls/>
-    </Protocol>
+    <Protocol name="Generic MIDI" active="no"/>
   </ControlProtocols>
 </Ardour>
