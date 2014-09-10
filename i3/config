@@ -81,6 +81,11 @@ bindsym $win+BackSpace kill
 # start dmenu (a program launcher)
 bindsym $win+p exec zsh ~/.config/i3/scripts/dmenu_run.zsh
 
+# dmenu window chooser
+bindsym $win+w exec python ~/.config/i3/scripts/i3-quickswitch.py
+# todo? : replace with https://davedavenport.github.io/rofi/
+
+
 #invert the screen
 bindsym $win+i exec --no-startup-id xcalib -i -a
 
@@ -287,9 +292,9 @@ workspace 2 output $mon_ext
 workspace 3 output $mon_ext
 workspace 4 output $mon_ext
 workspace 5 output $mon_ext
+workspace 6 output $mon_ext
+workspace 7 output $mon_ext
 
-workspace 6 output $mon_lap
-workspace 7 output $mon_lap
 workspace 8 output $mon_lap
 workspace 9 output $mon_lap
 workspace 10 output $mon_lap
@@ -301,7 +306,7 @@ workspace 10 output $mon_lap
 # {{{ Workspaces location
 # laptop monitor
 # external monitor
-assign [class="(?i)iceweasel"] → 1
+#assign [class="(?i)iceweasel"] → 1
 assign [class="(?i)geany"] → 2
 
 #todo: fix:
