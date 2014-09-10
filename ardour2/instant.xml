@@ -1,71 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <instant>
-  <ExportDialog sample_rate="44.1kHz" src_quality="best" dither_type="None" channel_count="stereo" header_format="WAV" bitdepth_format="16 bit" endian_format="Little-endian (Intel)" filename="/media/sdb1/Circumflex/JijKuntErbij/export/JijKuntErbijVocals.wav" cue_file_type="None">
+  <ExportDialog sample_rate="44.1kHz" src_quality="best" dither_type="None" channel_count="stereo" header_format="WAV" bitdepth_format="24 bit" endian_format="Little-endian (Intel)" filename="/media/sda9/StudioMagnetophon/Zou/ZouEP2013/export/Ankanou.wav" cue_file_type="None">
     <Tracks>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
-      <Track channel1="off" channel2="off"/>
       <Track channel1="off" channel2="off"/>
       <Track channel1="off" channel2="off"/>
       <Track channel1="off" channel2="off"/>
@@ -74,10 +10,10 @@
       <Track channel1="off" channel2="off"/>
     </Tracks>
   </ExportDialog>
-  <Editor id="11" zoom-focus="4" zoom="18112.102115" snap-to="14" snap-mode="2" edit-point="EditAtMouse" playhead="976985" show-waveforms="yes" show-waveforms-rectified="no" show-waveforms-recording="yes" show-measures="no" follow-playhead="no" stationary-playhead="no" xfades-visible="yes" region-list-sort-type="ByStartInFile" mouse-mode="MouseObject" show-editor-mixer="no">
-    <geometry x_size="1916" y_size="1036" x_pos="0" y_pos="20" x_off="2" y_off="20" edit_pane_pos="1579"/>
-  </Editor>
   <Mixer narrow-strips="no" show-mixer="yes">
-    <geometry x_size="1918" y_size="1056" x_pos="0" y_pos="0" x_off="0" y_off="0" mixer_rhs_pane1_pos="352" mixer_list_hpane_pos="233"/>
+    <geometry x_size="1918" y_size="1056" x_pos="0" y_pos="0" x_off="0" y_off="0" mixer_rhs_pane1_pos="353" mixer_list_hpane_pos="75"/>
   </Mixer>
+  <Editor id="11" zoom-focus="4" zoom="25396.184741" snap-to="17" snap-mode="2" edit-point="EditAtMouse" playhead="28216510" show-waveforms="yes" show-waveforms-rectified="no" show-waveforms-recording="yes" show-measures="no" follow-playhead="no" stationary-playhead="no" xfades-visible="yes" region-list-sort-type="ByName" mouse-mode="MouseObject" show-editor-mixer="no">
+    <geometry x_size="1916" y_size="1036" x_pos="0" y_pos="20" x_off="2" y_off="20" edit_pane_pos="1794"/>
+  </Editor>
 </instant>
