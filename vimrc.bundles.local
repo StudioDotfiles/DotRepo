@@ -1,0 +1,12 @@
+
+Plugin 'gmoe/vim-faust'
+Plugin 'Chiel92/vim-autoformat'
+" Plugin 'sbl/scvim'
+" if count(g:spf13_bundle_groups, 'programming')
+" Pick one of the checksyntax, jslint, or syntastic
+"Plugin 'scrooloose/syntastic'
+UnBundle 'tpope/vim-fugitive'
+"Plugin 'mattn/webapi-vim'
+UnBundle 'mattn/gist-vim'
+"Plugin 'scrooloose/nerdcommenter'
+"Plugin 'tpope/vim-commentary'
