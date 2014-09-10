@@ -3,4 +3,4 @@
 #./open "http://bugs.debian.org/$(sselp)"
 
 #package search in debian testing
-./open "http://packages.debian.org/search?keywords=$(sselp)&searchon=all&suite=testing&section=all"
+./open "http://packages.debian.org/search?keywords=$(sselp)&searchon=all&suite=wheezy&section=all"
