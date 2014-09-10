@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPreFader" order-keys="editor=12:signal=12" mode="Normal" diskstream-id="2565">
+  <IO id="2558" active="yes" input-connection="in 7" outputs="{master/in 1}{master/in 2}" gain="0.369060158730" iolimits="1,-1,-1,-1" name="LB_kick">
+    <Panner linked="no" link_direction="SameDirection" bypassed="no">
+      <Output x="0" y="0"/>
+      <Output x="1" y="0"/>
+      <StreamPanner x="0" type="Equal Power Stereo" muted="no">
+        <Automation>
+          <AutomationList id="17920" default="0" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+        </Automation>
+        <controllable name="panner" id="17919"/>
+      </StreamPanner>
+      <StreamPanner x="1" type="Equal Power Stereo" muted="no">
+        <Automation>
+          <AutomationList id="17923" default="1" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+        </Automation>
+        <controllable name="panner" id="17922"/>
+      </StreamPanner>
+    </Panner>
+    <controllable name="gaincontrol" id="2559"/>
+  </IO>
+  <controllable name="solo" id="2562"/>
+  <controllable name="mute" id="2563"/>
+  <remote_control id="13"/>
+  <Insert type="ladspa" unique-id="3423" count="1">
+    <Redirect active="yes" placement="PreFader">
+      <IO name="Nova Parametric Equalizer" id="17945" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+        <controllable name="gaincontrol" id="17946"/>
+      </IO>
+    </Redirect>
+    <ladspa>
+      <port number="2" value="+3.000000"/>
+      <controllable name="Stages" id="17950"/>
+      <port number="3" value="-40.000000"/>
+      <controllable name="Gain (per Stage)" id="17952"/>
+      <port number="4" value="+196.310471"/>
+      <controllable name="Frequency" id="17954"/>
+      <port number="5" value="+56.502239"/>
+      <controllable name="Bandwidth" id="17956"/>
+    </ladspa>
+    <controls>
+      <controllable name="Stages" id="17950" parameter="2"/>
+      <controllable name="Gain (per Stage)" id="17952" parameter="3"/>
+      <controllable name="Frequency" id="17954" parameter="4"/>
+      <controllable name="Bandwidth" id="17956" parameter="5"/>
+    </controls>
+    <PortAutomation>
+      <port number="2">
+        <AutomationList id="17951" default="1" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+      <port number="3">
+        <AutomationList id="17953" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+      <port number="4">
+        <AutomationList id="17955" default="440" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+      <port number="5">
+        <AutomationList id="17957" default="100" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+    </PortAutomation>
+  </Insert>
+  <Insert type="lv2" unique-id="http://plugin.org.uk/swh-plugins/split" count="1">
+    <Redirect active="yes" placement="PreFader">
+      <IO name="Mono to Stereo splitter" id="17914" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+        <controllable name="gaincontrol" id="17915"/>
+      </IO>
+    </Redirect>
+    <lv2/>
+    <controls/>
+    <PortAutomation/>
+  </Insert>
+  <Insert type="lv2" unique-id="http://drobilla.net/plugins/mda/SubSynth" count="1">
+    <Redirect active="yes" placement="PreFader">
+      <IO name="MDA SubSynth" id="17926" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+        <controllable name="gaincontrol" id="17927"/>
+      </IO>
+    </Redirect>
+    <lv2>
+      <port number="0" symbol="type" value="+0.500000"/>
+      <controllable name="Type" id="17930"/>
+      <port number="1" symbol="level" value="+0.226804"/>
+      <controllable name="Level" id="17931"/>
+      <port number="2" symbol="tune" value="+0.600000"/>
+      <controllable name="Tune" id="17933"/>
+      <port number="3" symbol="dry_mix" value="+1.000000"/>
+      <controllable name="Dry Mix" id="17935"/>
+      <port number="4" symbol="thresh" value="+0.600000"/>
+      <controllable name="Thresh" id="17937"/>
+      <port number="5" symbol="release" value="+0.650000"/>
+      <controllable name="Release" id="17939"/>
+    </lv2>
+    <controls>
+      <controllable name="Type" id="17930" parameter="0"/>
+      <controllable name="Level" id="17931" parameter="1"/>
+      <controllable name="Tune" id="17933" parameter="2"/>
+      <controllable name="Dry Mix" id="17935" parameter="3"/>
+      <controllable name="Thresh" id="17937" parameter="4"/>
+      <controllable name="Release" id="17939" parameter="5"/>
+    </controls>
+    <PortAutomation>
+      <port number="0" symbol="type">
+        <AutomationList id="17942" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+      <port number="1" symbol="level">
+        <AutomationList id="17932" default="0.300000011921" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+      <port number="2" symbol="tune">
+        <AutomationList id="17934" default="0.600000023842" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+      <port number="3" symbol="dry_mix">
+        <AutomationList id="17936" default="1" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+      <port number="4" symbol="thresh">
+        <AutomationList id="17938" default="0.600000023842" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+      <port number="5" symbol="release">
+        <AutomationList id="17940" default="0.649999976158" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+    </PortAutomation>
+  </Insert>
+  <Insert type="ladspa" unique-id="3423" count="2">
+    <Redirect active="yes" placement="PreFader">
+      <IO name="Nova Parametric Equalizer" id="17959" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+        <controllable name="gaincontrol" id="17960"/>
+      </IO>
+    </Redirect>
+    <ladspa>
+      <port number="2" value="+1.000000"/>
+      <port number="3" value="+0.000000"/>
+      <port number="4" value="+440.000000"/>
+      <port number="5" value="+100.000000"/>
+    </ladspa>
+    <controls/>
+    <PortAutomation>
+      <port number="2">
+        <AutomationList id="17964" default="1" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+      <port number="3">
+        <AutomationList id="17965" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+      <port number="4">
+        <AutomationList id="17966" default="440" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+      <port number="5">
+        <AutomationList id="17967" default="100" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+      </port>
+    </PortAutomation>
+  </Insert>
+  <extra>
+    <GUI color="34929:44641:42033" shown_mixer="yes" height="44" strip_width="Wide" shown_editor="yes">
+      <gain shown="no" height="68"/>
+      <pan shown="no" height="68"/>
+    </GUI>
+  </extra>
+  <alignment style="ExistingMaterial"/>
+  <controllable name="recenable" id="15164"/>
+</Route>

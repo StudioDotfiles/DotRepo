@@ -295,6 +295,8 @@ workspace 5 output $mon_ext
 workspace 6 output $mon_ext
 workspace 7 output $mon_ext
 
+workspace 6 output $mon_lap
+workspace 7 output $mon_lap
 workspace 8 output $mon_lap
 workspace 9 output $mon_lap
 workspace 10 output $mon_lap

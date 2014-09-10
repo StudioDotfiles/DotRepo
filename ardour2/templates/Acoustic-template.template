@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Session version="2.0.0" id-counter="2438">
+  <Config>
+    <Option name="output-auto-connect" value="2"/>
+    <Option name="input-auto-connect" value="1"/>
+    <Option name="mtc-port-name" value="control"/>
+    <Option name="mmc-port-name" value="control"/>
+    <Option name="midi-port-name" value="control"/>
+    <Option name="auto-analyse-audio" value="yes"/>
+    <Option name="auto-return" value="yes"/>
+    <Option name="meter-falloff" value="32"/>
+    <end-marker-is-free val="no"/>
+  </Config>
+  <Sources/>
+  <Regions/>
+  <DiskStreams>
+    <AudioDiskstream flags="Recordable" channels="4" playlist="Tetramic2111" speed="1" name="Tetramic2111" id="138"/>
+    <AudioDiskstream flags="Recordable" channels="2" playlist="LR" speed="1" name="LR" id="176"/>
+    <AudioDiskstream flags="Recordable" channels="4" playlist="B-format" speed="1" name="B-format" id="202"/>
+  </DiskStreams>
+  <Locations>
+    <Location id="2439" name="start" start="0" end="0" flags="IsMark,IsStart" locked="no"/>
+    <Location id="2440" name="end" start="13230000" end="13230000" flags="IsMark,IsEnd" locked="no"/>
+  </Locations>
+  <Connections/>
+  <Routes>
+    <Route flags="MasterOut" default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=0:signal=0">
+      <IO name="master" id="18" active="yes" inputs="{Tetramic2111/out 1,LR/out 1,B-format/out 1,TetraL/out 1}{Tetramic2111/out 2,LR/out 2,B-format/out 2,TetraR/out 2}" outputs="{system:playback_1}{system:playback_2}" gain="1.000000834465" iolimits="-1,2,-1,2">
+        <Panner linked="yes" link_direction="OppositeDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="119" default="0" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="118"/>
+          </StreamPanner>
+          <StreamPanner x="0.999999940395" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="122" default="1" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="121"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="19"/>
+      </IO>
+      <controllable name="solo" id="22"/>
+      <controllable name="mute" id="23"/>
+      <remote_control id="1"/>
+      <Send bitslot="0">
+        <Redirect active="no" placement="PostFader">
+          <IO name="send 1" id="544" active="yes" inputs="" outputs="{system:playback_3}{system:playback_4}" gain="0.289948970079" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no">
+              <Output x="0" y="0"/>
+              <Output x="1" y="0"/>
+              <StreamPanner x="0" type="Equal Power Stereo" muted="no">
+                <Automation>
+                  <AutomationList id="550" default="0" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+                </Automation>
+                <controllable name="panner" id="549"/>
+              </StreamPanner>
+              <StreamPanner x="1" type="Equal Power Stereo" muted="no">
+                <Automation>
+                  <AutomationList id="553" default="1" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+                </Automation>
+                <controllable name="panner" id="552"/>
+              </StreamPanner>
+            </Panner>
+            <controllable name="gaincontrol" id="545"/>
+          </IO>
+        </Redirect>
+      </Send>
+      <Insert type="ladspa" unique-id="3423" count="2">
+        <Redirect active="yes" placement="PreFader">
+          <IO name="Nova Parametric Equalizer" id="1692" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="1693"/>
+          </IO>
+        </Redirect>
+        <ladspa>
+          <port number="2" value="+1.000000"/>
+          <controllable name="Stages" id="1697"/>
+          <port number="3" value="-6.597971"/>
+          <controllable name="Gain (per Stage)" id="1699"/>
+          <port number="4" value="+50.000004"/>
+          <controllable name="Frequency" id="1701"/>
+          <port number="5" value="+5.000000"/>
+          <controllable name="Bandwidth" id="1703"/>
+        </ladspa>
+        <controls>
+          <controllable name="Stages" id="1697" parameter="2"/>
+          <controllable name="Gain (per Stage)" id="1699" parameter="3"/>
+          <controllable name="Frequency" id="1701" parameter="4"/>
+          <controllable name="Bandwidth" id="1703" parameter="5"/>
+        </controls>
+        <PortAutomation>
+          <port number="2">
+            <AutomationList id="1698" default="1" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="3">
+            <AutomationList id="1700" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="4">
+            <AutomationList id="1702" default="440" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="5">
+            <AutomationList id="1704" default="100" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="14102:11439:3738" shown_mixer="yes" height="68" shown_editor="no">
+          <gain shown="no" height="68"/>
+          <pan shown="no" height="68"/>
+        </GUI>
+      </extra>
+    </Route>
+    <Route default-type="audio" muted="yes" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=1:signal=1" mode="Normal" diskstream-id="138">
+      <IO name="Tetramic2111" id="131" active="yes" inputs="{system:capture_1}{system:capture_2}{system:capture_3}{system:capture_4}" outputs="{master/in 1}{master/in 2}{}{}" gain="1.995262265205" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <Output x="1" y="1"/>
+          <Output x="0" y="1"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="132"/>
+      </IO>
+      <controllable name="solo" id="135"/>
+      <controllable name="mute" id="136"/>
+      <remote_control id="2"/>
+      <extra>
+        <GUI color="19464:37725:11726" strip_width="Wide" shown_mixer="yes" height="68" shown_editor="yes">
+          <gain shown="no" height="68"/>
+          <pan shown="no" height="68"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="2022"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=2:signal=2" mode="Normal" diskstream-id="176">
+      <IO name="LR" id="169" active="yes" inputs="{system:capture_5}{system:capture_6}" outputs="{master/in 1}{master/in 2}" gain="0.274569898844" iolimits="1,-1,-1,-1">
+        <Panner linked="yes" link_direction="OppositeDirection" bypassed="no">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <StreamPanner x="0" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="181" default="0" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="180"/>
+          </StreamPanner>
+          <StreamPanner x="1" type="Equal Power Stereo" muted="no">
+            <Automation>
+              <AutomationList id="184" default="1" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+            </Automation>
+            <controllable name="panner" id="183"/>
+          </StreamPanner>
+        </Panner>
+        <controllable name="gaincontrol" id="170"/>
+      </IO>
+      <controllable name="solo" id="173"/>
+      <controllable name="mute" id="174"/>
+      <remote_control id="3"/>
+      <Insert type="ladspa" unique-id="1054" count="2">
+        <Redirect active="yes" placement="PreFader">
+          <IO name="Echo Delay Line (Maximum Delay 0.1s)" id="930" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="931"/>
+          </IO>
+        </Redirect>
+        <ladspa>
+          <port number="0" value="+0.035567"/>
+          <controllable name="Delay (Seconds)" id="935"/>
+          <port number="1" value="+1.000000"/>
+          <controllable name="Dry/Wet Balance" id="937"/>
+        </ladspa>
+        <controls>
+          <controllable name="Delay (Seconds)" id="935" parameter="0"/>
+          <controllable name="Dry/Wet Balance" id="937" parameter="1"/>
+        </controls>
+        <PortAutomation>
+          <port number="0">
+            <AutomationList id="936" default="1" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="1">
+            <AutomationList id="938" default="0.5" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <Insert type="ladspa" unique-id="3301" count="1">
+        <Redirect active="yes" placement="PreFader">
+          <IO name=":: Invada :: Input Module" id="974" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="975"/>
+          </IO>
+        </Redirect>
+        <ladspa>
+          <port number="0" value="+0.000000"/>
+          <controllable name="Phase Reverse (Left)" id="979"/>
+          <port number="1" value="+0.000000"/>
+          <controllable name="Phase Reverse (Right)" id="981"/>
+          <port number="2" value="+0.000000"/>
+          <controllable name="Gain (dB)" id="983"/>
+          <port number="3" value="+0.000000"/>
+          <controllable name="Pan (L-R)" id="985"/>
+          <port number="4" value="+0.000000"/>
+          <controllable name="Width (M-S)" id="987"/>
+          <port number="5" value="+0.000000"/>
+          <controllable name="Soft Clip" id="989"/>
+        </ladspa>
+        <controls>
+          <controllable name="Phase Reverse (Left)" id="979" parameter="0"/>
+          <controllable name="Phase Reverse (Right)" id="981" parameter="1"/>
+          <controllable name="Gain (dB)" id="983" parameter="2"/>
+          <controllable name="Pan (L-R)" id="985" parameter="3"/>
+          <controllable name="Width (M-S)" id="987" parameter="4"/>
+          <controllable name="Soft Clip" id="989" parameter="5"/>
+        </controls>
+        <PortAutomation>
+          <port number="0">
+            <AutomationList id="980" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="1">
+            <AutomationList id="982" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="2">
+            <AutomationList id="984" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="3">
+            <AutomationList id="986" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="4">
+            <AutomationList id="988" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="5">
+            <AutomationList id="990" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="20968:39213:6946" strip_width="Wide" shown_mixer="yes" height="68" shown_editor="yes">
+          <gain shown="no" height="68"/>
+          <pan shown="no" height="68"/>
+        </GUI>
+      </extra>
+      <alignment style="ExistingMaterial"/>
+      <controllable name="recenable" id="2035"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterInput" order-keys="editor=3:signal=3" mode="Normal" diskstream-id="202">
+      <IO name="B-format" id="195" active="yes" inputs="{tetraproc:B-form.W}{tetraproc:B-form.X}{tetraproc:B-form.Y}{tetraproc:B-form.Z}" outputs="{master/in 1}{master/in 2}{}{}" gain="0.000000000000" iolimits="1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <Output x="1" y="1"/>
+          <Output x="0" y="1"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="196"/>
+      </IO>
+      <controllable name="solo" id="199"/>
+      <controllable name="mute" id="200"/>
+      <remote_control id="4"/>
+      <Send bitslot="1">
+        <Redirect active="yes" placement="PreFader">
+          <IO name="send 2" id="861" active="yes" inputs="" outputs="{TetraL/in 1,TetraR/in 1}{TetraL/in 2,TetraR/in 2}{TetraL/in 3,TetraR/in 3}{TetraL/in 4,TetraR/in 4}" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+              <Output x="0" y="0"/>
+              <Output x="1" y="0"/>
+              <Output x="1" y="1"/>
+              <Output x="0" y="1"/>
+              <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+              <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+              <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+              <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+            </Panner>
+            <controllable name="gaincontrol" id="862"/>
+          </IO>
+        </Redirect>
+      </Send>
+      <Insert type="ladspa" unique-id="1962" count="1">
+        <Redirect active="yes" placement="PreFader">
+          <IO name="Virtual stereo microphone" id="326" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="327"/>
+          </IO>
+        </Redirect>
+        <ladspa>
+          <port number="6" value="+38.969036"/>
+          <controllable name="Elevation" id="331"/>
+          <port number="7" value="-31.546326"/>
+          <controllable name="Azimuth" id="333"/>
+          <port number="8" value="+0.000000"/>
+          <controllable name="Angle" id="335"/>
+          <port number="9" value="+0.432991"/>
+          <controllable name="Polar" id="337"/>
+        </ladspa>
+        <controls>
+          <controllable name="Elevation" id="331" parameter="6"/>
+          <controllable name="Azimuth" id="333" parameter="7"/>
+          <controllable name="Angle" id="335" parameter="8"/>
+          <controllable name="Polar" id="337" parameter="9"/>
+        </controls>
+        <PortAutomation>
+          <port number="6">
+            <AutomationList id="332" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="7">
+            <AutomationList id="334" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="8">
+            <AutomationList id="336" default="90" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="9">
+            <AutomationList id="338" default="1" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="18775:187:45365" strip_width="Wide" shown_mixer="yes" height="68" shown_editor="yes">
+          <gain shown="no" height="68"/>
+          <pan shown="no" height="68"/>
+        </GUI>
+      </extra>
+      <alignment style="CaptureTime"/>
+      <controllable name="recenable" id="2054"/>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=4:signal=4">
+      <IO name="TetraL" id="732" active="yes" inputs="{send 2/out 1}{send 2/out 2}{send 2/out 3}{send 2/out 4}" outputs="{master/in 1}{}{}{}" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <Output x="1" y="1"/>
+          <Output x="0" y="1"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="733"/>
+      </IO>
+      <controllable name="solo" id="736"/>
+      <controllable name="mute" id="737"/>
+      <remote_control id="5"/>
+      <Insert type="ladspa" unique-id="1962" count="1">
+        <Redirect active="yes" placement="PreFader">
+          <IO name="Virtual stereo microphone" id="795" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="796"/>
+          </IO>
+        </Redirect>
+        <ladspa>
+          <port number="6" value="+5.566993"/>
+          <controllable name="Elevation" id="913"/>
+          <port number="7" value="-40.824909"/>
+          <controllable name="Azimuth" id="914"/>
+          <port number="8" value="+0.000000"/>
+          <controllable name="Angle" id="915"/>
+          <port number="9" value="+1.000000"/>
+          <controllable name="Polar" id="916"/>
+        </ladspa>
+        <controls>
+          <controllable name="Elevation" id="913" parameter="6"/>
+          <controllable name="Azimuth" id="914" parameter="7"/>
+          <controllable name="Angle" id="915" parameter="8"/>
+          <controllable name="Polar" id="916" parameter="9"/>
+        </controls>
+        <PortAutomation>
+          <port number="6">
+            <AutomationList id="805" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="7">
+            <AutomationList id="806" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="8">
+            <AutomationList id="807" default="90" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="9">
+            <AutomationList id="808" default="1" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="24763:44620:5107" strip_width="Wide" shown_mixer="yes" height="68" shown_editor="yes">
+          <gain shown="no" height="68"/>
+          <pan shown="no" height="68"/>
+        </GUI>
+      </extra>
+    </Route>
+    <Route default-type="audio" muted="no" soloed="no" phase-invert="no" denormal-protection="no" mute-affects-pre-fader="yes" mute-affects-post-fader="yes" mute-affects-control-outs="yes" mute-affects-main-outs="yes" meter-point="MeterPostFader" order-keys="editor=5:signal=5">
+      <IO name="TetraR" id="750" active="yes" inputs="{send 2/out 1}{send 2/out 2}{send 2/out 3}{send 2/out 4}" outputs="{}{master/in 2}{}{}" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+        <Panner linked="no" link_direction="SameDirection" bypassed="yes">
+          <Output x="0" y="0"/>
+          <Output x="1" y="0"/>
+          <Output x="1" y="1"/>
+          <Output x="0" y="1"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+          <StreamPanner x="0.5" y="0.5" type="Multiple (2D)"/>
+        </Panner>
+        <controllable name="gaincontrol" id="751"/>
+      </IO>
+      <controllable name="solo" id="754"/>
+      <controllable name="mute" id="755"/>
+      <remote_control id="6"/>
+      <Insert type="ladspa" unique-id="1962" count="1">
+        <Redirect active="yes" placement="PreFader">
+          <IO name="Virtual stereo microphone" id="800" active="yes" inputs="" outputs="" gain="1.000000000000" iolimits="-1,-1,-1,-1">
+            <Panner linked="no" link_direction="SameDirection" bypassed="no"/>
+            <controllable name="gaincontrol" id="801"/>
+          </IO>
+        </Redirect>
+        <ladspa>
+          <port number="6" value="+51.958778"/>
+          <controllable name="Elevation" id="901"/>
+          <port number="7" value="-16.700897"/>
+          <controllable name="Azimuth" id="902"/>
+          <port number="8" value="+0.000000"/>
+          <controllable name="Angle" id="903"/>
+          <port number="9" value="+1.000000"/>
+          <controllable name="Polar" id="904"/>
+        </ladspa>
+        <controls>
+          <controllable name="Elevation" id="901" parameter="6"/>
+          <controllable name="Azimuth" id="902" parameter="7"/>
+          <controllable name="Angle" id="903" parameter="8"/>
+          <controllable name="Polar" id="904" parameter="9"/>
+        </controls>
+        <PortAutomation>
+          <port number="6">
+            <AutomationList id="809" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="7">
+            <AutomationList id="810" default="0" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="8">
+            <AutomationList id="811" default="90" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+          <port number="9">
+            <AutomationList id="812" default="1" min_yval="1.17549435082e-38" max_yval="3.40282346639e+38" max_xval="0" state="Off" style="Absolute"/>
+          </port>
+        </PortAutomation>
+      </Insert>
+      <extra>
+        <GUI color="20024:39553:22448" strip_width="Wide" shown_mixer="yes" height="68" shown_editor="yes">
+          <gain shown="no" height="68"/>
+          <pan shown="no" height="68"/>
+        </GUI>
+      </extra>
+    </Route>
+  </Routes>
+  <EditGroups/>
+  <MixGroups/>
+  <Playlists>
+    <Playlist name="B-format" orig_diskstream_id="202" frozen="no"/>
+    <Playlist name="Tetramic2111" orig_diskstream_id="138" frozen="no"/>
+    <Playlist name="LR" orig_diskstream_id="176" frozen="no"/>
+  </Playlists>
+  <UnusedPlaylists/>
+  <Click>
+    <IO name="click" id="24" active="yes" inputs="" outputs="{system:playback_1}{system:playback_2}" gain="1.000000000000" iolimits="0,0,-1,-1">
+      <Panner linked="no" link_direction="SameDirection" bypassed="no">
+        <Output x="0" y="0"/>
+        <Output x="1" y="0"/>
+        <StreamPanner x="0.5" type="Equal Power Stereo" muted="no">
+          <Automation>
+            <AutomationList id="116" default="0.5" min_yval="0" max_yval="1" max_xval="0" state="Off" style="Absolute"/>
+          </Automation>
+          <controllable name="panner" id="115"/>
+        </StreamPanner>
+      </Panner>
+      <controllable name="gaincontrol" id="25"/>
+    </IO>
+  </Click>
+  <TempoMap>
+    <Tempo start="1|1|0" beats-per-minute="120.000000" note-type="4.000000" movable="no"/>
+    <Meter start="1|1|0" note-type="4.000000" beats-per-bar="4.000000" movable="no"/>
+  </TempoMap>
+  <ControlProtocols>
+    <Protocol name="Mackie" active="no"/>
+    <Protocol name="Generic MIDI" feedback="0" feedback_interval="10000" active="yes">
+      <controls/>
+    </Protocol>
+  </ControlProtocols>
+  <extra>
+    <RulerVisibility smpte="no" bbt="no" frames="no" minsec="yes" tempo="no" meter="no" marker="yes" rangemarker="no" transportmarker="no" cdmarker="yes"/>
+  </extra>
+</Session>
