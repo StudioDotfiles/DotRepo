@@ -30,15 +30,18 @@ ZSH_THEME="risto"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(command-not-found debian git history-substring-search zsh-syntax-highlighting)
 
-
+#plugins=(command-not-found debian git history-substring-search zsh-syntax-highlighting vi-mode)
+#
+#vi-mode needs to be before history-substring-search 
+plugins=(vi-mode command-not-found debian git history-substring-search zsh-syntax-highlighting compleat dircycle extract fasd taskwarrior colored-man)
+#compleat 
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games
-
-
-unsetopt correct_all
+export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'gvim'; else echo 'vim'; fi)"
+alias mn='/bin/findmnt -rnuc -o SOURCE,TARGET,FSTYPE,OPTIONS | sort | column -t'
+alias gv='gvim'
 
