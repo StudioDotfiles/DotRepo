@@ -2,5 +2,5 @@
 
 #./open "http://bugs.debian.org/$(sselp)"
 
-#package search in debian testing
+#package search in debian wheezy
 ./open "http://packages.debian.org/search?keywords=$(sselp)&searchon=all&suite=wheezy&section=all"
