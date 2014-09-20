@@ -1,0 +1,14 @@
+"to be used with the spf13 vim distribution
+"don't forget vimrc.before.local and vimrc.bundles.local
+
+:behave mswin
+:set nospell
+
+"faust
+autocmd BufNewFile,BufRead *.dsp set filetype=faust
+autocmd BufNewFile,BufRead *.lib set filetype=faust
+
+
+"supercollider
+"so ~/.scvimrc
+"let g:sclangTerm = "urxvtc -e"

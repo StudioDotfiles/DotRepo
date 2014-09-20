@@ -1,4 +1,4 @@
 #!/bin/zsh
 
 #geany "${*:-$(sselp)}"
-geany $(sselp)
+gvim ${*:-$(sselp)}
