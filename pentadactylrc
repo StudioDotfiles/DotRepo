@@ -1,0 +1,38 @@
+"1.1
+
+loadplugins '\.(js|penta)$'
+group user
+set hintkeys=asdfg;lkjh
+
+highlight -a Hint text-transform: uppercase; padding: 0 2px 0 1px; background-color: yellow; font: bold 11px “Droid Sans Mono”;
+highlight -a HintElem background-color: transparent;
+
+
+set go=CMns
+
+set popups=tab
+
+" highlight all search matches, not just the first
+set hlfind
+" find as you type
+set incfind
+" only consider case if an upper case char is used
+set findcase=smart
+" set wild mode to show completions as you type
+"set wildmode=list:longest,full
+" don't show autocomplete list until <Tab>
+"set autocomplete=
+" turn off the freakin' bell {{{
+set noerrorbells
+set visualbell
+javascript dactyl.beep = function() { return false; }
+"}}}
+" Yank (copy) to default clipboard with Y {{{
+js editor.defaultRegister="+"
+
+
+" vim: set ft=pentadactyl:
+
+
+
+"https://github.com/helmuthdu/pentadactyl.git
