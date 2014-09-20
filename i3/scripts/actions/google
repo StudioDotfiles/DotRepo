@@ -1,5 +1,5 @@
 #!/bin/zsh -f
 
-#./open "https://www.google.com/search?q=$(sselp)"
-./open "https://duckduckgo.com/?q=$(sselp)"
+./open "https://www.google.com/search?q=\"$(sselp)\""
+#./open "https://duckduckgo.com/?q=$(sselp)"
 

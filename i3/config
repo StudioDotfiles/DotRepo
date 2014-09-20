@@ -19,6 +19,8 @@
 set $win Mod4
 set $alt Mod1
 
+workspace_auto_back_and_forth yes
+
 # monitors
 set $mon_lap LVDS1
 set $mon_ext VGA1
@@ -26,9 +28,9 @@ set $mon_ext VGA1
 
 # {{{ Apparence
 # font for window titles. ISO 10646 = Unicode
-#font -*-*-medium-*-*-*-15-*-*-*-*-*-*-*
-font -*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*
-
+#font -*-*-medium-*-*-*-14-*-*-*-*-*-*-*
+font -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
 # Invertable colorscheme:
 set $focusBG		#ffff00
@@ -66,7 +68,7 @@ set $term urxvtc
 set $editor geany
 set $browser iceweasel
 set $mua evolution
-set $filem pcmanfm
+set $filem spacefm
 
 
 ########################################################################
@@ -79,6 +81,7 @@ set $filem pcmanfm
 bindsym $win+BackSpace kill
 
 # start dmenu (a program launcher)
+#bindsym $win+p exec dmenu_run
 bindsym $win+p exec zsh ~/.config/i3/scripts/dmenu_run.zsh
 
 # dmenu window chooser
@@ -236,6 +239,21 @@ bindsym $win+m mode "monitor_select" ; exec notify-send "Monitor select: 1(one) 
 
 
 
+# Section to control the Master output
+#bindSym XF86AudioRaiseVolume exec amixer set Master 1%+
+#bindSym XF86AudioLowerVolume exec amixer set Master 1%-
+#bindSym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
+
+bindSym XF86AudioRaiseVolume  exec --no-startup-id "amixer -q set Master 3dB+"
+bindSym XF86AudioLowerVolume  exec --no-startup-id "amixer -q set Master 3dB-"
+bindSym XF86AudioMute         exec --no-startup-id "amixer -q set Master toggle"
+
+#Section to control the Capture (mic)
+bindSym Shift+XF86AudioRaiseVolume exec amixer set Capture 1%+
+bindSym Shift+XF86AudioLowerVolume exec amixer set Capture 1%-
+bindSym Shift+XF86AudioMute exec amixer set Capture 1+ toggle
+
+
 # todo: start and/or focus
 #bindsym d [class="$filem"] focus;
 
@@ -309,6 +327,8 @@ workspace 10 output $mon_lap
 assign [class="(?i)geany"] → 2
 
 #todo: fix:
+assign [instance="ardour_editor"] → 1
+assign [instance="ardour_mixer"] → 2
 #assign [class="(?i)ardour" instance="ardour_editor"] → 1
 #assign [class="(?i)ardour" instance="ardour_mixer"] → 2
 
@@ -345,6 +365,8 @@ for_window [title="Event Tester"] floating enable
 # dirty hack to set default container layout for qjackctrl
 for_window [class="(?i)qjackctrl"] workspace 9 ; layout default
 
+for_window [instance="xcalc"] floating enable
+
 
 ########################################################################
 # autostart
@@ -353,11 +375,15 @@ for_window [class="(?i)qjackctrl"] workspace 9 ; layout default
 # Enable zapping (C-A-<Bksp> kills X)
 exec --no-startup-id setxkbmap -option terminate:ctrl_alt_bksp
 
+#for now, half the work is being done in ~/.xinitrc
+#export NSM_URL=osc.udp://WheezyOne.lbb:17552
+exec --no-startup-id nsmd --osc-port 17552
+
 # start clipboardmanager
 exec parcellite
 # start the terminal deamon
 exec urxvtd -q -o -f
 #enable dunst for notify-send
+#exec dunst -nb '$urgentBG' -nf '$focusBG' -geometry 0x3-100+0
+
 exec dunst -nb '$urgentBG' -nf '$focusBG' -geometry 0x3-100+0 -fn '-*-terminus-*-*-*-*-32-*-*-*-*-*-*-*'
-
-
