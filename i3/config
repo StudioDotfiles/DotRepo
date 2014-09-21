@@ -90,7 +90,8 @@ bindsym $win+w exec python ~/.config/i3/scripts/i3-quickswitch.py
 
 
 #invert the screen
-bindsym $win+i exec --no-startup-id xcalib -i -a
+bindsym $win+i exec --no-startup-id  ~/.bin/xrandr-invert-colors.bin
+#bindsym $win+i exec --no-startup-id xcalib -i -a
 
 # change focus
 bindsym $win+j focus left

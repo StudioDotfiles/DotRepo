@@ -4,7 +4,7 @@
 ":behave mswin
 
 "turn of spell-check
-:set nospell
+set nospell
 
 "faust
 autocmd BufNewFile,BufRead *.dsp set filetype=faust
@@ -32,7 +32,6 @@ autocmd InsertLeave  * : set relativenumber
 
 
 "writes current mappings to a file
-"! rm ~/.vim/vim_keys.txt
 redir! > ~/.vim/vim_keys.txt
 silent verbose map
 redir END
