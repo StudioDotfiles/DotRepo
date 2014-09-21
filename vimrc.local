@@ -3,6 +3,10 @@
 
 ":behave mswin
 
+"use the light solarized theme
+set background=light
+
+
 "turn of spell-check
 set nospell
 
