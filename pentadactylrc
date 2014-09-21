@@ -55,8 +55,8 @@ nmap l <C-Tab>
 nmap -builtin f F
 nmap -builtin F f
 nmap af  g;b
-nmap x :quit<CR>
-nmap X :undo<CR>
+nmap x <C-w>
+nmap X <C-S-t>
 " disable highlight
 map <Leader>/ :set hlf!<CR>
 " yank selected text to clipboard
