@@ -33,9 +33,9 @@ ZSH_THEME="risto"
 
 #plugins=(command-not-found debian git history-substring-search zsh-syntax-highlighting vi-mode)
 #
-#vi-mode needs to be before history-substring-search 
+#vi-mode needs to be before history-substring-search
 plugins=(vi-mode command-not-found debian git history-substring-search zsh-syntax-highlighting compleat dircycle extract fasd taskwarrior colored-man)
-#compleat 
+#compleat
 
 source $ZSH/oh-my-zsh.sh
 
