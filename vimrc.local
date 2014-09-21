@@ -1,7 +1,9 @@
 "to be used with the spf13 vim distribution
 "don't forget vimrc.before.local and vimrc.bundles.local
 
-:behave mswin
+":behave mswin
+
+"turn of spell-check
 :set nospell
 
 "faust
@@ -9,6 +11,28 @@ autocmd BufNewFile,BufRead *.dsp set filetype=faust
 autocmd BufNewFile,BufRead *.lib set filetype=faust
 
 
+"center search results on the screen
+nnoremap <silent> N Nzz
+nnoremap <silent> n nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+nnoremap <silent> g# g#zz
+
+
+" http://jeffkreeftmeijer.com/2012/relative-line-numbers-in-vim-for-super-fast-movement/
+autocmd FocusLost    * : set number
+autocmd FocusGained  * : set relativenumber
+autocmd InsertEnter  * : set number
+autocmd InsertLeave  * : set relativenumber
+
 "supercollider
 "so ~/.scvimrc
 "let g:sclangTerm = "urxvtc -e"
+
+
+"writes current mappings to a file
+"! rm ~/.vim/vim_keys.txt
+redir! > ~/.vim/vim_keys.txt
+silent verbose map
+redir END
