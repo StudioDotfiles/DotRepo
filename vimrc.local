@@ -5,7 +5,7 @@
 
 "use the light solarized theme
 set background=light
-
+set guifont=Monospace\ 12
 
 "turn of spell-check
 set nospell

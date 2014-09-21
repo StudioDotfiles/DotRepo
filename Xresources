@@ -1,3 +1,8 @@
+!! set terminal font:
+!!URxvt.font: -misc-fixed-medium-r-normal--17-*-*-*-c-0-iso8859-1
+URxvt.font:     xft:Monospace:size=12:antialias=true
+URxvt.boldFont: xft:Monospace:bold:size=16:antialias=true
+
 !! drop in Solarized colorscheme for Xresources
 !!
 !! ## Installation
