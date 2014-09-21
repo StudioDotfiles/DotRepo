@@ -23,16 +23,81 @@ set findcase=smart
 " don't show autocomplete list until <Tab>
 "set autocomplete=
 " turn off the freakin' bell {{{
-set noerrorbells
+"set noerrorbells
 set visualbell
-javascript dactyl.beep = function() { return false; }
+
 "}}}
 " Yank (copy) to default clipboard with Y {{{
 js editor.defaultRegister="+"
+"}}}
+" }}}
+" MAPPING {{{
+
+map , <Leader>
+" unset maps
+"nmap w <Nop>
+"map W <Nop>
+nmap d <Nop>
+nmap u <Nop>
+nmap a <Nop>
+" auto add -tags option when adding bookmark
+nmap a a<Space>-tags<Space>
+" vimium like keymap
+nmap d <C-d>
+nmap u <C-u>
+
+"this is slow:
+"nmap h :tabprevious<CR>
+"nmap l :tabnext<CR>
+"this is faster:
+nmap h <C-S-Tab>
+nmap l <C-Tab>
+nmap -builtin f F
+nmap -builtin F f
+nmap af  g;b
+nmap x :quit<CR>
+nmap X :undo<CR>
+" disable highlight
+map <Leader>/ :set hlf!<CR>
+" yank selected text to clipboard
+nmap Y <yank-selection>
+" open addons manager
+nmap <Leader>a :dialog addons<CR>
+" private mode
+nmap <Leader>p :set private!<CR>
+" display download
+nmap <Leader>j :downloads<CR>
+" add bookmarks
+nmap <Leader>d :dialog addbookmark<CR>
+" history
+nmap <Leader>h :history<CR>
+" list closed tabs
+nmap <Leader>u :undo<Space>
+" tabgroup
+if config.OS.isMacOSX
+    nmap -builtin <Leader>g <S-M-e>
+else
+    nmap -builtin <Leader>g <S-C-e>
+end
+" commands
+"nmap r :smartReload<CR>
+"map <silent> <Leader>w :smartLayoutClean<CR>
+"map <silent> <Leader>W :smartLayoutNormal<CR>
+"map <Leader>r :smartReader<CR>
+" bypass pentadactyl commands
+map -m n,v,i,c,t <C-a> <Pass>
+map -m n,v,i,c,t <C-c> <Pass>
+map -m n,v,i,c,t <C-f> <Pass>
+map -m n,v,i,c,t <C-l> <Pass>
+map -m n,v,i,c,t <C-p> <Pass>
+map -m n,v,i,c,t <C-v> <Pass>
+map -m n,v,i,c,t <C-x> <Pass>
+" }}}
 
 
-" vim: set ft=pentadactyl:
+
+" vim: set ft=vim;
 
 
-
+"from:
 "https://github.com/helmuthdu/pentadactyl.git
