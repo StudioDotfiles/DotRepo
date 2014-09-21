@@ -44,4 +44,4 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games
 export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'gvim'; else echo 'vim'; fi)"
 alias mn='/bin/findmnt -rnuc -o SOURCE,TARGET,FSTYPE,OPTIONS | sort | column -t'
 alias gv='gvim'
-
+alias gs='git status'
