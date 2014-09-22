@@ -12,8 +12,10 @@
 	main-window-geometry = 1018x725+0+0
 [gui]
 	#historybrowser = 
-	editor = geany
+    #editor = gvim -f
 [diff]
 	tool = meld
 [merge]
-	tool = meld
+    tool = meld
+[core]
+    editor = gvim -f
