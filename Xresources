@@ -4,8 +4,8 @@
 !!URxvt*italicFont:  xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
 !!URxvt*boldItalicFont:  xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
 
-urxvt*font:             xft:Terminus:pixelsize=14:antialias=true
-urxvt*boldFont:         xft:Terminus:pixelsize=14:antialias=true
+urxvt*font:             xft:Terminus:medium:pixelsize=14:antialias=false
+urxvt*boldFont:         xft:Terminus:medium:pixelsize=14:antialias=false
 
 URxvt.scrollBar: false
 
@@ -28,9 +28,9 @@ URxvt*urgentOnBell:       true
 urxvt.transparent:      false
 urxvt*allow_bold:       true
 
-Xft*dpi:                96
+!!Xft*dpi:                96
 Xft*antialias:          true
-Xft*hinting:            full
+!!Xft*hinting:            full
 
 !! drop in Solarized colorscheme for Xresources
 !!
