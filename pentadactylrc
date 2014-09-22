@@ -79,19 +79,6 @@ if config.OS.isMacOSX
 else
     nmap -builtin <Leader>g <S-C-e>
 end
-" commands
-"nmap r :smartReload<CR>
-"map <silent> <Leader>w :smartLayoutClean<CR>
-"map <silent> <Leader>W :smartLayoutNormal<CR>
-"map <Leader>r :smartReader<CR>
-" bypass pentadactyl commands
-map -m n,v,i,c,t <C-a> <Pass>
-map -m n,v,i,c,t <C-c> <Pass>
-map -m n,v,i,c,t <C-f> <Pass>
-map -m n,v,i,c,t <C-l> <Pass>
-map -m n,v,i,c,t <C-p> <Pass>
-map -m n,v,i,c,t <C-v> <Pass>
-map -m n,v,i,c,t <C-x> <Pass>
 " }}}
 
 
