@@ -1,7 +1,36 @@
 !! set terminal font:
-!!URxvt.font: -misc-fixed-medium-r-normal--17-*-*-*-c-0-iso8859-1
-URxvt.font:     xft:Monospace:size=12:antialias=true
-URxvt.boldFont: xft:Monospace:bold:size=16:antialias=true
+!!URxvt*font:  -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12
+!!URxvt*boldFont:  -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12
+!!URxvt*italicFont:  xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
+!!URxvt*boldItalicFont:  xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
+
+urxvt*font:             xft:Terminus:pixelsize=14:antialias=true
+urxvt*boldFont:         xft:Terminus:pixelsize=14:antialias=true
+
+URxvt.scrollBar: false
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+!turn off perl
+URxvt.perl-ext:
+URxvt.perl-ext-common:
+
+URxvt*visualBell:  true
+URxvt*urgentOnBell:       true
+
+urxvt.transparent:      false
+urxvt*allow_bold:       true
+
+Xft*dpi:                96
+Xft*antialias:          true
+Xft*hinting:            full
 
 !! drop in Solarized colorscheme for Xresources
 !!
@@ -51,7 +80,7 @@ URxvt.boldFont: xft:Monospace:bold:size=16:antialias=true
 
 *background:            S_base3
 *foreground:            S_base00
-*fading:                40
+*fading:                30
 *fadeColor:             S_base3
 *cursorColor:           S_base01
 *pointerColorBackground:S_base1
