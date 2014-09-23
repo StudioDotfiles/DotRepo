@@ -94,10 +94,10 @@ bindsym $win+i exec --no-startup-id  ~/.bin/xrandr-invert-colors.bin
 #bindsym $win+i exec --no-startup-id xcalib -i -a
 
 # change focus
-bindsym $win+j focus left
-bindsym $win+k focus down
-bindsym $win+l focus up
-bindsym $win+semicolon focus right
+bindsym $win+h focus left
+bindsym $win+j focus down
+bindsym $win+k focus up
+bindsym $win+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $win+Left focus left
@@ -106,10 +106,10 @@ bindsym $win+Up focus up
 bindsym $win+Right focus right
 
 # move focused window
-bindsym $win+Shift+J move left
-bindsym $win+Shift+K move down
-bindsym $win+Shift+L move up
-bindsym $win+Shift+colon move right
+bindsym $win+Shift+H move left
+bindsym $win+Shift+J move down
+bindsym $win+Shift+K move up
+bindsym $win+Shift+L move right
 
 # alternatively, you can use the cursor keys:
 bindsym $win+Shift+Left move left
@@ -118,7 +118,7 @@ bindsym $win+Shift+Up move up
 bindsym $win+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $win+h split h
+bindsym $win+semicolon split h
 
 # split in vertical orientation
 bindsym $win+v split v
@@ -159,8 +159,7 @@ bindsym $win+0 workspace 10
 bindsym $alt+Tab workspace next
 bindsym $alt+Shift+Tab workspace prev
 
-# todo test/fix?
-# change output focus
+# change focus to another monitor
 bindsym $win+$alt+Left focus output left
 bindsym $win+$alt+Right focus output right
 bindsym $win+$alt+Up focus output up
