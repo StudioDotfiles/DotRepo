@@ -65,7 +65,7 @@ new_window normal
 # some variables
 # todo: remove unused
 set $term urxvtc
-set $editor geany
+set $editor gvim
 set $browser iceweasel
 set $mua evolution
 set $filem spacefm
