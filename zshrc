@@ -5,9 +5,12 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="budspencer"
-# robbyrussell
-# juanghurtado
+#ZSH_THEME="random"
+#ZSH_THEME="budspencer"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="avit"
+#ZSH_THEME="risto"
+ZSH_THEME="juanghurtadoVI"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -74,5 +77,30 @@ setopt HIST_VERIFY # Don't execute immediately upon history expansion.
 setopt HIST_BEEP # Beep when accessing nonexistent history.alias fl='FaustLive'
 
 
-
-
+##################################################################
+# change cursor color in vi-mode
+##################################################################
+bindkey -v
+zle-keymap-select () {
+  if [ $TERM = "screen" ]; then
+    if [ $KEYMAP = vicmd ]; then
+      echo -ne '\033P\033]12;#ff6565\007\033\\'
+    else
+      echo -ne '\033P\033]12;grey\007\033\\'
+    fi
+  elif [ $TERM != "linux" ]; then
+    if [ $KEYMAP = vicmd ]; then
+      echo -ne "\033]12;#ff6565\007"
+    else
+      echo -ne "\033]12;grey\007"
+    fi
+  fi
+}; zle -N zle-keymap-select
+zle-line-init () {
+  zle -K viins
+  if [ $TERM = "screen" ]; then
+    echo -ne '\033P\033]12;grey\007\033\\'
+  elif [ $TERM != "linux" ]; then
+    echo -ne "\033]12;grey\007"
+  fi
+}; zle -N zle-line-init
