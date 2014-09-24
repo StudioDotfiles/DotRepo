@@ -15,6 +15,11 @@ autocmd BufNewFile,BufRead *.dsp set filetype=faust
 autocmd BufNewFile,BufRead *.lib set filetype=faust
 
 
+"buffer navigation:
+nmap <Left> :bp<CR>
+nmap <Right> :bn<CR>
+
+
 "center search results on the screen
 nnoremap <silent> N Nzz
 nnoremap <silent> n nzz
