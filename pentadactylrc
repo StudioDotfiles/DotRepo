@@ -55,7 +55,8 @@ nmap l <C-Tab>
 nmap -builtin f F
 nmap -builtin F f
 nmap af  g;b
-nmap x <C-w>
+"nmap x <C-w>
+map -m n,v,i,c,t x <C-w>
 nmap X <C-S-t>
 " disable highlight
 map <Leader>/ :set hlf!<CR>
@@ -64,7 +65,7 @@ nmap Y <yank-selection>
 " open addons manager
 nmap <Leader>a :dialog addons<CR>
 " private mode
-nmap <Leader>p :set private!<CR>
+nmap <Leader>p :private winopen
 " display download
 nmap <Leader>j :downloads<CR>
 " add bookmarks
@@ -81,7 +82,15 @@ else
 end
 " }}}
 
-
+ " bypass pentadactyl commands
+map -m n,v,i,c,t <C-a> <Pass>
+map -m n,v,i,c,t <C-c> <Pass>
+map -m n,v,i,c,t <C-f> <Pass>
+map -m n,v,i,c,t <C-l> <Pass>
+map -m n,v,i,c,t <C-n> :winopen
+map -m n,v,i,c,t <C-p> <Pass>
+map -m n,v,i,c,t <C-v> <Pass>
+map -m n,v,i,c,t <C-x> <Pass>
 
 " vim: set ft=vim;
 
