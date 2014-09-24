@@ -10,7 +10,18 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="avit"
 #ZSH_THEME="risto"
-ZSH_THEME="juanghurtadoVI"
+#ZSH_THEME="juanghurtadoVI"
+
+ZSH_THEME_GIT_PROMPT_UNMERGED=" %{$RED%}unmerged"
+ZSH_THEME_GIT_PROMPT_DELETED=" %{$RED%}deleted"
+ZSH_THEME_GIT_PROMPT_RENAMED=" %{$YELLOW%}renamed"
+ZSH_THEME_GIT_PROMPT_MODIFIED=" %{$YELLOW%}modified"
+ZSH_THEME_GIT_PROMPT_ADDED=" %{$GREEN%}added"
+ZSH_THEME_GIT_PROMPT_UNTRACKED=" %{$WHITE%}untracked"
+
+PROMPT='%n@%M %~ %#'
+RPROMPT='$(current_branch) $(git_prompt_status)'
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
