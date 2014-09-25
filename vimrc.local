@@ -2,6 +2,7 @@
 "don't forget vimrc.before.local and vimrc.bundles.local
 
 ":behave mswin
+set visualbell
 
 "use the light solarized theme
 set background=light
