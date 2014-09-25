@@ -6,10 +6,12 @@
 "loadplugins '\.(js|penta)$'
 "group user
 "set hintkeys=asdfg;lkjh
-
-highlight -a Hint text-transform: uppercase; padding: 0 2px 0 1px; background-color: yellow; font: bold 11px “Droid Sans Mono”;
+highlight -a Hint background-color: yellow; font: 11px “Terminus”;
 highlight -a HintElem background-color: transparent;
 
+
+
+set defsearch=g
 
 set go=CMns
 
