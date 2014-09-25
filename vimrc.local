@@ -1,10 +1,11 @@
 "to be used with the spf13 vim distribution
 "don't forget vimrc.before.local and vimrc.bundles.local
 
-":behave mswin
+"visual bell instead of beep:
 set visualbell
-
-"use the light solarized theme
+"also flash on error messages:
+set errorbells
+"use the light solarized theme:
 set background=light
 set guifont=Monospace\ 11
 
