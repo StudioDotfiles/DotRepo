@@ -1,8 +1,11 @@
 "1.1
 
-loadplugins '\.(js|penta)$'
-group user
-set hintkeys=asdfg;lkjh
+"source:
+"https://github.com/helmuthdu/pentadactyl.git
+
+"loadplugins '\.(js|penta)$'
+"group user
+"set hintkeys=asdfg;lkjh
 
 highlight -a Hint text-transform: uppercase; padding: 0 2px 0 1px; background-color: yellow; font: bold 11px “Droid Sans Mono”;
 highlight -a HintElem background-color: transparent;
@@ -52,12 +55,15 @@ nmap u <C-u>
 "this is faster:
 nmap h <C-S-Tab>
 nmap l <C-Tab>
+"reverse f and F:
 nmap -builtin f F
 nmap -builtin F f
+"open multiple in background tab
 nmap af  g;b
-"nmap x <C-w>
-map -m n,v,i,c,t x <C-w>
-nmap X <C-S-t>
+"close tab
+map -m n,v,o x <C-w>
+"undo close tab
+map -m n,v,o X <C-S-t>
 " disable highlight
 map <Leader>/ :set hlf!<CR>
 " yank selected text to clipboard
@@ -92,8 +98,4 @@ map -m n,v,i,c,t <C-p> <Pass>
 map -m n,v,i,c,t <C-v> <Pass>
 map -m n,v,i,c,t <C-x> <Pass>
 
-" vim: set ft=vim;
-
-
-"from:
-"https://github.com/helmuthdu/pentadactyl.git
+" vim: set ft=vim
