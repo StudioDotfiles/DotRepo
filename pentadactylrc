@@ -100,4 +100,18 @@ map -m n,v,i,c,t <C-p> <Pass>
 map -m n,v,i,c,t <C-v> <Pass>
 map -m n,v,i,c,t <C-x> <Pass>
 
-" vim: set ft=vim
+
+silent bma -tags searchengine -title 'Internet Archive' https://archive.org/search.php?query=%s-k a
+silent bma -tags searchengine -title 'Debian package description'  https://packages.debian.org/search?suite=wheezy&section=all&arch=i386&searchon=all&keywords=%s -k d
+silent bma -tags searchengine -title 'google' https://www.google.com/search?pws=0&suggon=0&safe=off&filter=0&num=30&q=%s&tbs=li:1 -k g
+silent bma -tags searchengine -title 'images' https://www.google.com/search?pws=0&suggon=0&safe=off&filter=0&tbm=isch&q=%s -k i
+silent bma -tags searchengine -title 'arch linux wiki' https://wiki.archlinux.org/index.php?search=%s -k l
+silent bma -tags searchengine -title 'maps' https://maps.google.com/maps?q=%s  -k m
+silent bma -tags searchengine -title 'OpenStreetMap' https://www.openstreetmap.org/search?query=%s  -k o
+silent bma -tags searchengine -title 'video' https://www.google.com/search?pws=0&suggon=0&safe=off&filter=0&tbm=vid&q=%s  -k v
+silent bma -tags searchengine -title 'wikipedia' https://en.wikipedia.org/w/index.php?search=%s  -k w
+silent bma -tags searchengine -title 'Wolfram Alpha' http://www.wolframalpha.com/input/?i=%s -k wa
+silent bma -tags searchengine -title 'mycroft' http://mycroftproject.com/search-engines.html?name=%s  -k y
+
+
+"vim :set ft=vim
