@@ -46,3 +46,6 @@ autocmd InsertLeave  * : set relativenumber
 redir! > ~/.vim/vim_keys.txt
 silent verbose map
 redir END
+
+
+" vim: set ft=vim
