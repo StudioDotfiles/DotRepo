@@ -63,6 +63,10 @@ alias gv='gvim'
 #might mess with GhostScript:
 alias gs='git status'
 
+
+alias 2f='faust2firefox'
+alias 2j='faust2jack'
+
 #
 # Sets history options.
 #
